@@ -1,0 +1,65 @@
+
+.main-title {
+  font-weight: 700;
+  font-size: 5.5em;
+}
+.main-title-second {
+  font-weight: 700;
+  font-size: 4.5em;
+}
+.main-title-info {
+    font-size: 2em;
+    font-weight: 400;
+    line-height: 48px;
+    letter-spacing: 0.4px;
+}
+.main-btn {
+    background-color:#2A91FF;
+    color: white;
+    padding: 1.5% 15%;
+    border-color: transparent;
+    font-size: 16px;
+    font-weight: 500;
+}
+.dark-blue {
+  color: #11295a;
+}
+.middle-blue{
+    color: #0C5AE9;
+}
+.light-blue {
+  color: #2A91FF;
+}
+.raleway {
+  font-family: Raleway;
+}
+.poppins {
+  font-family: "Poppins", sans-serif;
+}
+
+
+@media screen and (max-width:680px) {
+  .main-title {
+      font-size: 4em;
+  }
+  .main-title-info {
+      font-size: 1.5;
+  }
+  .main-title-second{
+    font-size: 3.5em;
+  }
+  
+}
+@media screen and (max-width:385px) {
+  .main-title {
+    font-size: 3em;
+  }
+  .main-title-info {
+    font-size: 18px;
+    line-height: 27px;
+  }
+  .main-title-second {
+    font-size: 48px;
+  }
+  
+}

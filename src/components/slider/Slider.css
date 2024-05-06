@@ -1,0 +1,26 @@
+.slider {
+    margin-top: 50px;
+    text-align: center;
+    padding: 30px 0px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.slide {
+    margin: 0px 3%;
+}
+
+.slide img {
+    max-width: 80%;
+    width: 245.96px;
+    height: 52.84px;
+    gap: 0px;
+    opacity: 0px;
+}
+@media screen and (max-width:385px) {
+    .slide img {
+        width: 145.96px;
+        height: 32.84px;
+    }
+    
+}

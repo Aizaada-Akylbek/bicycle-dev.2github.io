@@ -1,0 +1,92 @@
+.team {
+  padding: 6% 0;
+}
+
+.team-block {
+  text-align: center;
+  gap: 1.5rem;
+}
+
+.team-title {
+  width: 90%;
+  margin: 0 auto;
+  gap: 1.5rem;
+}
+
+.team p {
+  color: #144194;
+  margin: 1.67% 0 4.65%;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.875rem;
+  width: 63.54%;
+  margin: 0 auto;
+  padding: 2.5rem 0px;
+}
+
+.cards-team {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 3% 0;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+.image-container img {
+  max-width: 100%;
+}
+
+.image-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10% 20%;
+  border-radius: 15px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  width: 100%;
+  padding: 10% 0 10% 10%;
+  /* background-color:red; */
+}
+
+.image-container:hover .image-text {
+  opacity: 100;
+}
+
+.image-text h6 {
+  font-size: 14px;
+  font-weight: 300;
+  color: grey;
+}
+
+.image-text h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin: 1.5rem 0;
+}
+@media screen and (max-width: 680px) {
+  .cards-team {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card-team {
+    margin-bottom: 3%;
+  }
+}
+
+@media screen and (max-width:385px) {
+  .team-title {
+    width: 100%;
+  }
+  .team p{
+    font-size: 18px;
+    width: 100%;
+  }
+  
+}
