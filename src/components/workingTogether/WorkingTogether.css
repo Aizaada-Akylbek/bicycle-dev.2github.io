@@ -91,6 +91,9 @@
     .contact-interested {
       display: block;
     }
+    .contact-img {
+      margin-top: 2%;
+    }
     .contact-address {
       width: 100%;
     }
