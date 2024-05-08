@@ -1,9 +1,53 @@
-import React from 'react'
+import React from "react";
+// import '../../styles/industries.css'
+// import zvezda from '../assets/socials/Testimonial/4/Stars.svg'
+// import avatarTestimonial from '../assets/socials/Testimonial 2/4/Avatar Image.png'
+// import slack from '../assets/socials/Black.png'
+import "../styles/Industries.css";
+import DevOperations from "../components/ui/devOperations/DevOperations";
+import { NavLink } from "react-router-dom";
+import Review from "../components/review/Review";
 
 const Industries = () => {
+  const industriesData = [
+    { number: "01", title: "Product certification", description: "Certification systems are pivotal in ensuring compliance, quality assurance, and industry standards adherence across various sectors. Our expertise in certification systems encompasses the design, implementation, and management of robust frameworks tailored to meet the specific needs of organizations.From protocol implementation to testing and certification, we provide comprehensive technical solutions to help businesses navigate complex regulatory landscapes and achieve certification. Our comprehensive solutions ensure that devices meet strict performance standards, guaranteeing optimal compatibility and user satisfaction.Get our broad expertise in innovative technical solutions for certification, adaptable to diverse needs, from local industries to global regulatory standards." },
+    { number: "02", title: "Foodservice and Catering Industry", description: "In the dynamic world of food service and catering, efficiency, accuracy, and customer satisfaction are paramount. Our expertise in this industry encompasses a range of tailored IT solutions designed to streamline operations, optimize workflows, and elevate guest experiences.From intuitive POS (Point of Sale) systems and online ordering platforms to inventory management software and catering event management tools, we leverage cutting-edge technology to address the unique needs of food service providers and caterers. Our solutions empower businesses to streamline order processing, manage inventory effectively, and deliver seamless catering experiences.With a deep understanding of the challenges and opportunities in the food service and catering industry, we are committed to delivering innovative technology-driven solutions that help businesses thrive and exceed customer expectations." },
+    { number: "03", title: "Transportation", description: "In the dynamic world of transportation, reliability and time-management are significant. From advanced route optimization and fleet management systems to real-time tracking and logistics analytics platforms, we leverage cutting-edge technology to streamline operations, improve visibility, and optimize resource utilization. Our solutions empower transportation companies to enhance customer experiences, reduce costs, and drive business growth in today's competitive market." },
+    { number: "04", title: "Finance", description: "In the ever-changing realm of financial technology (fintech), adaptability, security, and inventive solutions are essential. From state-of-the-art payment processing systems and digital banking platforms to blockchain innovations and automated investment advisory services, we harness advanced technologies to cater to the unique requirements of fintech firms, banking institutions, and financial organizations. Our solutions empower enterprises to streamline operations, minimize expenses, and deliver seamless digital experiences to their customers.With a profound comprehension of the intricacies and potential of the fintech sector, we are dedicated to delivering inventive IT solutions that enable businesses to flourish and outpace their competitors." },
+];
   return (
-    <div>Industries</div>
-  )
-}
+    <div className="industries container">
+      <div className="industries-hero">
+        <h2 className="main-title poppins dark-blue">
+          Service Excellence across Different Industries!
+        </h2>
+        <p className="main-title-info">
+          Benefit from our extensive expertise in tech solutions, catering to a
+          range of needs, from local applications to global digital platforms.
+        </p>
+        <NavLink to="/contacts">
+          {" "}
+          <button className="main-btn">Contact us</button>
+        </NavLink>
+      </div>
 
-export default Industries
+      <div className="industries-cards">
+        {industriesData.map((el)=>(
+
+        <div className="industries-card">
+          <h3 className="poppins middle-blue">{el.number}</h3>
+          <h4 className="dark-blue">{el.title}</h4>
+          <p>
+ {el.description}
+          </p>
+        </div>
+        ))}
+      </div>
+<Review/>
+      <DevOperations />
+      
+    </div>
+  );
+};
+
+export default Industries;
