@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import WorkingTogether from "../components/workingTogether/WorkingTogether";
 
 const Contacts = () => {
   return (
-    <div>Contacts</div>
-  )
-}
+    <div>
+      <WorkingTogether />
+    </div>
+  );
+};
 
-export default Contacts
+export default Contacts;

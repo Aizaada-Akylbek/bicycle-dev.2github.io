@@ -1,19 +1,19 @@
 import React, { useState } from "react";
-import partLogo from '../../assets/servicesLogos/icon.png'
+import partLogo from "../../assets/servicesLogos/icon.png";
 import Line from "../../assets/servicesLogos/Line.png";
 import Vector from "../../assets/servicesLogos/Vector.svg";
 import Vector1 from "../../assets/servicesLogos/Vector1.svg";
 import Vector2 from "../../assets/servicesLogos/Vector2.svg";
-import './Expertise.css'
+import "./Expertise.css";
 
- const Expertise = () => {
+const Expertise = () => {
   const [expertiseData, setExpertiseData] = useState([
     {
       icon: Vector,
       title: "Digital Designing: Where Innovation Meets Imagination!",
       description:
         "Crafting visually appealing and user-friendly interfaces. Every interaction meticulously designed for seamless navigation and engagement.Web Design: Bringing your online presence to life with captivating and functional designs that reflect your brand identity.Mobile Design: Tailored mobile experiences for iOS and Android apps, ensuring beauty, usability, and satisfaction.Stand out in the digital landscape with our design expertise, leaving a lasting impression on your users.",
-      width: 40
+      width: 40,
     },
     {
       icon: partLogo,
@@ -34,7 +34,7 @@ import './Expertise.css'
       title: "Front-end: Transforming Vision into Seamless User Experiences.",
       description:
         " Front-end development focuses on the user-facing aspects of a website or application, encompassing the design and functionality that users interact with directly. Our front-end development team crafts captivating interfaces that seamlessly blend aesthetics with functionality. With expertise in HTML, CSS, and JavaScript, we breathe life into your digital presence, ensuring intuitive navigation and engaging interactions for your users. From responsivedesigns to interactive elements, we're here to elevate your online brand experience.",
-      width: 40
+      width: 40,
     },
     {
       icon: Vector2,
@@ -52,7 +52,11 @@ import './Expertise.css'
         style={{ display: "flex", justifyContent: "space-between" }}
       >
         {expertiseData.map((expData) => (
-          <div className="service-block" style={{ width: `${expData.width}%` }} key={expData.icon}>
+          <div
+            className="service-block"
+            style={{ width: `${expData.width}%` }}
+            key={expData.icon}
+          >
             <img src={expData.icon} alt={expData.icon} />
             <div className="service-block-title dark-blue">{expData.title}</div>
             <p>{expData.description}</p>
@@ -60,7 +64,7 @@ import './Expertise.css'
         ))}
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default Expertise;

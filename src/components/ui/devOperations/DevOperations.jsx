@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import './DevOperations.css'
+import "./DevOperations.css";
 
 const DevOperations = () => {
   return (
@@ -14,7 +14,6 @@ const DevOperations = () => {
         {" "}
         <button className="main-btn">Contact our experts</button>
       </NavLink>
-
     </div>
   );
 };

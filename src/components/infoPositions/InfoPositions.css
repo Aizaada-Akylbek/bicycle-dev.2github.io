@@ -1,0 +1,36 @@
+.info-positions-cards {
+  margin: 56px 0 32px;
+}
+.info-positions-card {
+  border-radius: 20px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.08);
+  padding: 40px 24px;
+  margin-bottom: 32px;
+  color: #11295a;
+}
+.info-positions-card h2 {
+  font-weight: 700;
+  font-size: 48px;
+  margin-bottom: 24px;
+  color: #0d6efd;
+}
+.info-positions-card p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+}
+.info-positions-card ul li {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  margin-left: 20px;
+}
+
+@media screen and (max-width: 400px) {
+  .info-positions-cards {
+    margin: 24px 0 32px;
+  }
+  .info-positions-card h2 {
+    font-size: 45px;
+  }
+}

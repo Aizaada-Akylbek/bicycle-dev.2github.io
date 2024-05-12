@@ -13,7 +13,7 @@
 }
 
 .industries-hero p {
-    margin: 40px 0 48px;
+  margin: 40px 0 48px;
 }
 
 /* industries-cards */
@@ -60,18 +60,16 @@
 
 /* end */
 
-@media screen and (max-width:800px) {
-    .industries-cards {
-      flex-direction: column;
-    }
-    .industries-card {
-      width: 100%;
-    }
-    
+@media screen and (max-width: 800px) {
+  .industries-cards {
+    flex-direction: column;
+  }
+  .industries-card {
+    width: 100%;
+  }
 }
-@media screen and (max-width:600px) {
+@media screen and (max-width: 600px) {
   .industries-card {
     padding: 24px 29px;
   }
-  
 }

@@ -26,28 +26,20 @@ const WorkingTogether = () => {
 
         <div className="contact-location">
           <h4>Contact us:</h4>
-          <h5 >team@bicycle-dev.com</h5>
+          <h5>team@bicycle-dev.com</h5>
           <div className="contact-us">
             <div className="contact-tel">
-         
-                <img src={Phone} alt="" />
-         
-                <img src={WhatsApp} alt="" />
-        
+              <img src={Phone} alt="" />
+
+              <img src={WhatsApp} alt="" />
+
               <h5>+49 177 470 54 40</h5>
             </div>
           </div>
           <div className="contact-us">
             <div className="contact-tel">
-           
-                {" "}
-                <img src={Phone} alt="" />
-       
-       
-                {" "}
-                <img src={WhatsApp} alt="" />
-   
-
+              {" "}
+              <img src={Phone} alt="" /> <img src={WhatsApp} alt="" />
               <h5>+49 177 557 11 32</h5>
             </div>
           </div>

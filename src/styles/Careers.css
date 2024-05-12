@@ -1,0 +1,13 @@
+.hero-careers {
+  background-image: url("../assets/mainBgs/careersBg.png");
+  background-position: center;
+  background-size: cover;
+  color: white;
+  border-radius: 20px;
+  margin: 48px 0;
+  text-align: center;
+  padding: 107px 20%;
+}
+.hero-careers p {
+  margin: 40px 0;
+}

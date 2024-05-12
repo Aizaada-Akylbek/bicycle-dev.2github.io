@@ -1,0 +1,69 @@
+import React from "react";
+
+const Month = ({ year, month, holidays }) => {
+  const startDate = new Date(year, month, 1);
+  const endDate = new Date(year, month + 1, 0);
+  const daysInMonth = endDate.getDate();
+  const monthName = startDate.toLocaleString("en-US", { month: "long" });
+
+  const startDayOfWeek = startDate.getDay();
+
+  const daysFromPrevMonth = startDayOfWeek === 0 ? 6 : startDayOfWeek - 1;
+
+  const lastDayOfPrevMonth = new Date(year, month, 0).getDate();
+
+  const totalDays = daysFromPrevMonth + daysInMonth;
+  const daysFromNextMonth = totalDays % 7 === 0 ? 0 : 7 - (totalDays % 7);
+
+  const dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return (
+    <div className="month">
+      <h2>{monthName}</h2>
+      <div className="days">
+        {dayNames.map((day) => (
+          <div key={day} className="day day-name">
+            {day}
+          </div>
+        ))}
+        {[
+          ...Array(daysFromPrevMonth)
+            .fill(null)
+            .map((_, index) => (
+              <div key={`prev-${index}`} className="day disabled">
+                {lastDayOfPrevMonth - daysFromPrevMonth + index + 1}
+              </div>
+            )),
+          ...Array.from({ length: daysInMonth }, (_, i) => i + 1).map(
+            (day, index) => {
+              const currentDate = new Date(year, month, day);
+              const isHoliday = holidays.some(
+                (holiday) =>
+                  currentDate.toDateString() ===
+                  new Date(holiday).toDateString()
+              );
+
+              return (
+                <div
+                  key={index}
+                  className={`day ${isHoliday ? "holiday" : ""}`}
+                >
+                  {day}
+                </div>
+              );
+            }
+          ),
+          ...Array.from({ length: daysFromNextMonth }, (_, i) => i + 1).map(
+            (day, index) => (
+              <div key={`next-${index}`} className="day disabled">
+                {day}
+              </div>
+            )
+          ),
+        ]}
+      </div>
+    </div>
+  );
+};
+
+export default Month;
