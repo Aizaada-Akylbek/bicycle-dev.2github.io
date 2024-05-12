@@ -18,8 +18,7 @@ const Team = () => {
     <div className="team container">
       <div className="team-block">
         <div className="main-title-second poppins dark-blue team-title">
-          <span className="middle-blue">Teamwork</span> is the only way we
-          work
+          <span className="middle-blue">Teamwork</span> is the only way we work
         </div>
         <p>
           At the heart of our company lies an exceptional team of talented
@@ -31,17 +30,17 @@ const Team = () => {
       </div>
       <div className="cards-team">
         {teamData.map((el, index) => (
-          <div className="card-team"  key={index} >
+          <div className="card-team" key={index}>
             <div className="image-container" key={el.img}>
-            <img src={el.img} alt="user" className="img-team" />
-            <div className="image-text">
-              <h6>BDM and Founder</h6>
-              <h3>Farkhat Bakhtiyar</h3>
-              <NavLink>
-                <img src={LD} alt="" />
-              </NavLink>
+              <img src={el.img} alt="user" className="img-team" />
+              <div className="image-text">
+                <h6>BDM and Founder</h6>
+                <h3>Farkhat Bakhtiyar</h3>
+                <NavLink>
+                  <img src={LD} alt="" />
+                </NavLink>
+              </div>
             </div>
-          </div>
           </div>
         ))}
       </div>

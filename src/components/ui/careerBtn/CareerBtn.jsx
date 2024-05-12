@@ -1,6 +1,6 @@
 import React from "react";
 //img
-import RightLine from '../../../assets/uiImg/Right.svg'
+import RightLine from "../../../assets/uiImg/Right.svg";
 //css
 import "./CareerBtn.css";
 //router
