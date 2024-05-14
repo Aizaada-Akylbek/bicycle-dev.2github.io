@@ -33,6 +33,7 @@ const Industries = () => {
   ];
   return (
     <div className="industries container">
+      <div className="bg-medium bg-industries"/>
       <div className="industries-hero">
         <h2 className="main-title poppins dark-blue">
           Service Excellence across Different Industries!
@@ -48,6 +49,7 @@ const Industries = () => {
       </div>
 
       <div className="industries-cards">
+        <div className="bg-medium bg-industries-cards"/>
         {industriesData.map((el) => (
           <div className="industries-card">
             <h3 className="poppins middle-blue">{el.number}</h3>

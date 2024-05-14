@@ -1,6 +1,7 @@
 .expertise {
   /* margin: 20% 8%; */
   padding: 40px 0 32px;
+  position: relative;
 }
 .services-blocks {
   display: flex;
@@ -26,7 +27,13 @@
   font-weight: 300;
   line-height: 1.68rem;
 }
-
+.bg-expertise {
+  padding: 10%;
+  top: 15%;
+  right: 10%;
+  z-index: -1;
+  /* background-color:red */
+}
 @media screen and (max-width: 660px) {
   .services-blocks {
     flex-direction: column;

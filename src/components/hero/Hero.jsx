@@ -2,10 +2,12 @@ import React from "react";
 import "./Hero.css";
 import CareerBtn from "../ui/careerBtn/CareerBtn";
 import EmployeesBtn from "../ui/employeesBtn/EmployeesBtn";
-import Slider from "../slider/Slider";
+
 const Hero = () => {
   return (
     <div className="hero container dark-blue">
+            <div className="bg-long hero-bg-long"/>
+
       <h1 className="main-title poppins">
         Technical innovation for{" "}
         <span className="middle-blue">dynamic growth</span>

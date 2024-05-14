@@ -3,6 +3,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 64px 0 115px;
+    position: relative;
 }
 .partners-card img {
     width: 100%;
@@ -10,7 +11,7 @@
     background-position:center;
     background-repeat:no-repeat;
     object-fit: cover;
-    max-height: 30vh;
+    max-height: 37vh;
     border-radius:20px
 }
 
@@ -29,6 +30,12 @@
 .partners-card a {
     margin: 24px 0 64px;
     display: inline-block;
+}
+.bg-partners {
+    padding: 10%;
+    top: 30%;
+    right: 10%;
+    z-index: -1;
 }
 @media screen and (max-width:600px) {
     .partners-cards {

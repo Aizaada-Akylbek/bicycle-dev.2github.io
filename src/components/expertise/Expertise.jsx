@@ -46,6 +46,7 @@ const Expertise = () => {
   ]);
   return (
     <div className="expertise">
+      <div className="bg-long bg-expertise"/>
       <h2 className="main-title-second poppins dark-blue">Expertise</h2>
       <div
         className="services-blocks"

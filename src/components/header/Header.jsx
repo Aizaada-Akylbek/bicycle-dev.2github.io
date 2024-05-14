@@ -8,6 +8,24 @@ import TranslateBtn from "../ui/translateBtn/TranslateBtn";
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navbarRef = useRef(null);
+  const [isFixed, setIsFixed] = useState(false);
+
+  const navRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (navRef.current) {
+        setIsFixed(window.scrollY >= navRef.current.offsetTop);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
 
   const toggleNavbar = () => {
     setIsOpen(!isOpen);
@@ -20,7 +38,7 @@ const Header = () => {
       }
     };
 
-    document.addEventListener("mousedown", handleClickOutside);
+    // document.addEventListener("mousedown", handleClickOutside);
 
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
@@ -28,7 +46,7 @@ const Header = () => {
   }, []);
 
   return (
-    <nav>
+    <nav ref={navRef} id="myNav" className={isFixed ? 'fixed-nav' : ''}>
       <div
         className={`navbar ${isOpen ? "open" : ""} container`}
         ref={navbarRef}

@@ -1,5 +1,6 @@
 .hero {
   padding: 10% 0 5%;
+  position: relative;
 }
 .hero h1 {
   width: 80%;
@@ -12,7 +13,11 @@
   display: flex;
   justify-content: flex-end;
 }
-
+.hero-bg-long {
+  bottom:35%;
+  right: 15%;
+  padding: 10%;
+}
 @media screen and (max-width: 680px) {
   .hero h1 {
     width: 100%;
@@ -27,5 +32,11 @@
 @media screen and (max-width: 385px) {
   .hero-btns {
     display: block;
+  }
+  .hero-bg-long {
+    top: 0;
+    bottom: 0;
+    background: rgb(74 134 255 / 20%);
+  box-shadow: 0px 0px 100px 135px rgb(74 134 255 / 20%);
   }
 }

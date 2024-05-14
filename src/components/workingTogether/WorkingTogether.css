@@ -4,6 +4,7 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 4%;
+  position: relative;
 }
 
 .contact-address {
@@ -78,8 +79,13 @@
 .contact-tel h5 {
   font-size: 18px;
   font-weight: 400;
-  font-family: Raleway;
-  color: #11295a;
+}
+.contact-interested-bg {
+  top: 0;
+  padding: 5%;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
 }
 @media screen and (max-width: 660px) {
   .contact-interested {
