@@ -1,5 +1,6 @@
 .industries {
   margin-top: 56px;
+  position: relative;
 }
 
 .industries-hero {
@@ -21,6 +22,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  position: relative;
 }
 
 .industries-card {
@@ -57,6 +59,15 @@
   letter-spacing: 27px;
   letter-spacing: 0.25px;
 }
+.bg-industries {
+  padding: 10%;
+  top: 10%;
+  right: 5%;
+}
+.bg-industries-cards {
+  padding: 10%;
+  top: 40%;
+}
 
 /* end */
 
@@ -66,6 +77,12 @@
   }
   .industries-card {
     width: 100%;
+  }
+  .bg-industries {
+    display: none;
+  }
+  .bg-industries-cards {
+    display: none;
   }
 }
 @media screen and (max-width: 600px) {

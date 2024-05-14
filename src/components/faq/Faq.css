@@ -1,6 +1,7 @@
 .faq {
   padding: 6% 0;
   color: #11295a;
+  position: relative;
 }
 
 .faq-title h3 {
@@ -51,6 +52,11 @@
 .faq-question button {
   background-color: transparent;
   border-color: transparent;
+}
+.bg-faq {
+  top: 0;
+  padding: 5%;
+  top: 30%;
 }
 
 @media screen and (max-width: 660px) {

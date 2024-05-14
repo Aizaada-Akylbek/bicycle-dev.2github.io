@@ -75,7 +75,7 @@ const Faq = () => {
           We tried to answer most common questions, if you have any additional,
           please get in touch with our friendly team
         </h5>
-
+<div className="bg-medium bg-faq"/>
         <div className="faq-toggle">
           {faqText.map((el, index) => (
             <div className="faqs" key={index}>

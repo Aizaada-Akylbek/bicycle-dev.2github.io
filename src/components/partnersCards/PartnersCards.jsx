@@ -11,6 +11,7 @@ const PartnersCards = () => {
     ]
   return (
     <div className="partners-cards">
+      <div className='bg-long bg-partners'/>
         {cardData.map(el=>(
             <div className="partners-card dark-blue" style={{width:`${el.width}%`}}>
             <img src={el.bg} alt={el.title} />

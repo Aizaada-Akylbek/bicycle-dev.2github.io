@@ -47,6 +47,26 @@ a {
   font-family: "Poppins", sans-serif;
 }
 
+.bg-long {
+  position: absolute;
+  background: rgb(74 134 255 / 30%);
+  box-shadow: 0px 0px 100px 135px rgb(74 134 255 / 30%);
+  border-radius: 50%;
+  /* background-color:red */
+
+}
+.bg-medium {
+  position: absolute;
+  background: rgb(74 134 255 / 22%);
+  box-shadow: 0px 0px 100px 135px rgb(74 134 255 / 22%);
+  border-radius: 50%;
+}
+.bg-small {
+  position: absolute;
+  background: rgb(74 134 255 / 15%);
+  box-shadow: 0px 0px 100px 135px rgb(74 134 255 / 15%);
+  border-radius: 50%;
+}
 
 @media screen and (max-width:680px) {
   .main-title {
@@ -65,7 +85,7 @@ a {
 
   
 }
-@media screen and (max-width:385px) {
+@media screen and (max-width:416px) {
   .main-title {
     font-size: 3em;
   }
@@ -79,5 +99,6 @@ a {
   .main-btn {
     width: 100%;
   }
+
   
 }

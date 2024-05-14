@@ -13,6 +13,7 @@ import YouTube from "../../assets/contactUs/YouTube.svg";
 const WorkingTogether = () => {
   return (
     <div className="contact-interested container dark-blue">
+      <div className="bg-small contact-interested-bg"/>
       <div className="contact-address">
         <h3 className="poppins main-title-second ">
           Interested in <span className="middle-blue">working together?</span>
