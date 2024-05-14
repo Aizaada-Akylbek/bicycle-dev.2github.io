@@ -31,6 +31,7 @@ const CareersCards = () => {
 
   return (
     <div className="careers-cards dark-blue">
+      <div className="bg-medium bg-careers-cards"/>
       <div className="career-card big">
         <h3 className="poppins middle-blue ">01</h3>
         <h4>Team workshops and events</h4>

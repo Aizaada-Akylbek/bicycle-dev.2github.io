@@ -45,6 +45,8 @@ const InfoPositions = () => {
   ];
   return (
     <div className="info-positions-cards">
+      <div className="bg-medium bg-info-positions"/>
+      <div className="bg-medium bg-info-positions2"/>
       <div className="info-positions-card">
         <h2 className="poppins">Who and where are we looking for</h2>
         <p>

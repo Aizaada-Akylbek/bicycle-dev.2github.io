@@ -2,6 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  position: relative
 }
 .big {
   width: 65%;
@@ -30,6 +31,11 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 27px;
+}
+.bg-careers-cards {
+  padding: 10%;
+  top: 0;
+  z-index: -1;
 }
 @media screen and (max-width: 786px) {
   .careers-cards {
