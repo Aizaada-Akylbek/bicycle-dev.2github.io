@@ -5,6 +5,8 @@
     padding: 40px 24px;
     margin-bottom: 32px;
     color:#11295A;
+    background-color:white
+
 }
 .benefit h2 {
     font-weight: 700;
@@ -47,5 +49,8 @@
 }
 .benefit-cards {
     justify-content: center;
+}
+.bg-info-positions2 {
+    display: none;
 }
 }

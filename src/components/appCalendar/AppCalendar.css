@@ -1,3 +1,4 @@
+
 .calendar {
   display: flex;
   flex-wrap: wrap;
@@ -44,6 +45,7 @@
 .day.disabled {
   color: #b9e0ff; /* Grey color for inactive days */
 }
+
 @media screen and (max-width: 1405px) {
   .calendar {
     justify-content: center;

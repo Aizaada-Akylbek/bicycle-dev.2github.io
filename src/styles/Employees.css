@@ -1,3 +1,6 @@
+.employees{
+  position: relative;
+}
 .employees-block h3 {
   margin: 56px 0 48px;
 }
@@ -27,13 +30,15 @@
   justify-content: space-between;
   margin-bottom: 56px;
 }
+.employees-card {
+}
 .employees-user {
   width: 304px;
   /* background-color:red; */
   border-radius: 20px;
   box-shadow: 6px 4px 31px 0 rgba(0, 0, 0, 0.1);
   margin-top: 48px;
-
+background-color:white;
   overflow: hidden;
 }
 .user-img {
@@ -68,6 +73,13 @@
 }
 .employees-info button {
   width: 100%;
+}
+.bg-small {
+  padding: 10%;
+  /* background-color:#0c5ae9; */
+  top: 50%;
+  z-index: -1;
+
 }
 @media screen and (max-width: 1056px) {
   .employees-cards {

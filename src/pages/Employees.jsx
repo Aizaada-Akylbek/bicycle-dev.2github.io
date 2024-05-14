@@ -82,6 +82,7 @@ const Employees = () => {
   return (
     <div className="container">
       <div className="employees">
+        <div className="bg-small bg-employees"/>
         <div className="employees-block">
           <h3 className="main-title middle-blue poppins">Our employees</h3>
           <div className="employees-btns">

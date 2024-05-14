@@ -1,5 +1,6 @@
 .info-positions-cards {
   margin: 56px 0 32px;
+  position: relative;
 }
 .info-positions-card {
   border-radius: 20px;
@@ -7,6 +8,7 @@
   padding: 40px 24px;
   margin-bottom: 32px;
   color: #11295a;
+  background-color:white
 }
 .info-positions-card h2 {
   font-weight: 700;
@@ -24,6 +26,16 @@
   font-weight: 400;
   line-height: 27px;
   margin-left: 20px;
+}
+.bg-info-positions {
+  padding: 10%;
+z-index: -1;
+}
+.bg-info-positions2 {
+  padding: 10%;
+z-index: -1;
+bottom: 0;
+right: 0;
 }
 
 @media screen and (max-width: 400px) {
