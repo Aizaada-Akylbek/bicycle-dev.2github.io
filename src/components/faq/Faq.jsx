@@ -65,6 +65,9 @@ const Faq = () => {
 
   return (
     <div className="faq container">
+      <div className="m-circle">
+        <div className="xl-circle-inner"/>
+      </div>
       <div className="faq-title">
         <h3 className="poppins main-title-second">
           Frequently Asked{" "}
@@ -95,12 +98,7 @@ const Faq = () => {
             </div>
           ))}
         </div>
-        <div className="hero-circle-three" />
-        <div className="hero-plus-three" />
-        <div className="horizont-three" />
-        <div className="hero-shadow-circle" />
-        <div className="hero-circle-four" />
-        <div className="hero-circle-four-small" />
+  
       </div>
     </div>
   );
