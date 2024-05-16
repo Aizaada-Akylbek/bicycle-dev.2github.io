@@ -24,17 +24,14 @@
 }
 
 .employees-cards {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(304px, 1fr));
   gap: 16px;
-  justify-content: space-between;
   margin-bottom: 56px;
-}
-.employees-card {
+  grid-auto-flow: dense;
 }
 .employees-user {
-  width: 304px;
-  /* background-color:red; */
+  width: 100%;
   border-radius: 20px;
   box-shadow: 6px 4px 31px 0 rgba(0, 0, 0, 0.1);
   margin-top: 48px;
