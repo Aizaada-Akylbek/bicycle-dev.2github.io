@@ -6,7 +6,7 @@ import EmployeesBtn from "../ui/employeesBtn/EmployeesBtn";
 const Hero = () => {
   return (
     <div className="hero container dark-blue">
-            <div className="bg-long hero-bg-long"/>
+      <div className="bg-long hero-bg-long" />
 
       <h1 className="main-title poppins">
         Technical innovation for{" "}
@@ -18,6 +18,13 @@ const Hero = () => {
       <div className="hero-btns">
         <CareerBtn />
         <EmployeesBtn />
+      </div>
+      <div className="xl-circle" >
+        <div className="xl-circle-inner"></div>
+      </div>
+
+      <div className="l-circle" >
+        <div className="xl-circle-inner"></div>
       </div>
     </div>
   );
