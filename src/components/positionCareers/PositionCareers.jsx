@@ -17,7 +17,7 @@ const PositionCareers = () => {
       We are expanding our DevOps engineering department<br/> and look forward to
       working with professionals in this field.
     </p>
-   <NavLink  to="/fullstack"> <button className="main-btn">Apply now</button></NavLink>
+   <NavLink  to="/positions"> <button className="main-btn">Apply now</button></NavLink>
   </div>
   )
 }
