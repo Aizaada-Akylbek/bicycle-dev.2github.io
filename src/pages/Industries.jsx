@@ -32,7 +32,8 @@ const Industries = () => {
     },
   ];
   return (
-    <div className="industries container">
+    <div className="industries ">
+      <div className="container">
       <div className="bg-medium bg-industries"/>
       <div className="industries-hero">
         <h2 className="main-title poppins dark-blue">
@@ -60,6 +61,7 @@ const Industries = () => {
       </div>
       <Review />
       <DevOperations />
+      </div>
     </div>
   );
 };
