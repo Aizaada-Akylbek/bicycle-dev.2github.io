@@ -38,7 +38,6 @@
 }
 
 .calendar-office h4 {
-  font-family: Poppins;
   font-size: 48px;
   font-weight: 700;
   line-height: 72px;
@@ -46,11 +45,10 @@
 }
 
 .calendar-office p {
-  font-family: Raleway;
   font-size: 24px;
   font-weight: 400;
   line-height: 30px;
-  color: rgba(61, 61, 61, 1);
+  width: 100%;
 }
 .service-development {
   border-radius: 64px;

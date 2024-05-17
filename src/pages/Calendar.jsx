@@ -10,9 +10,9 @@ const Calendar = () => {
   return (
     <div className="container">
       <div className="hero-calendar dark-blue">
-      <div className="bg-long bg-calendar"/>
+        <div className="bg-long bg-calendar" />
         <h2 className="main-title poppins">
-          Office ipsum you must <br /> be  muted. Who's
+          Office ipsum you must <br /> be muted. Who's
         </h2>
         <p className="main-title-info">
           We help companies reach their potential through a combination of
@@ -26,12 +26,14 @@ const Calendar = () => {
           <CareerBtn />
         </div>
         <div className="year-calendar">
-        <div className="bg-medium bg-year-calendar"/>
+          <div className="bg-medium bg-year-calendar" />
 
           <AppCalendar />
         </div>
         <div className="calendar-office">
-          <h4>Office ipsum you must be muted. Activities just.</h4>
+          <h4 className="poppins">
+            Office ipsum you must be muted. Activities just.
+          </h4>
           <p>
             Office ipsum you must be muted. Users an meat ocean regroup nobody.
             Staircase ui shoulder squad hear reality club previous would. Savvy
