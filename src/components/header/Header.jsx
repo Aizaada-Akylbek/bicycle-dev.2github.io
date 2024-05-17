@@ -4,6 +4,7 @@ import darkLogo from "../../assets/logos/MainLogo.svg";
 import "./Header.css";
 import { NavLink } from "react-router-dom";
 import TranslateBtn from "../ui/translateBtn/TranslateBtn";
+import { useTranslation } from "react-i18next";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,7 +12,7 @@ const Header = () => {
   const [isFixed, setIsFixed] = useState(false);
 
   const navRef = useRef(null);
-
+  const { t, i18n } = useTranslation();
   useEffect(() => {
     const handleScroll = () => {
       if (navRef.current) {
@@ -19,13 +20,12 @@ const Header = () => {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
 
   const toggleNavbar = () => {
     setIsOpen(!isOpen);
@@ -46,7 +46,7 @@ const Header = () => {
   }, []);
 
   return (
-    <nav ref={navRef} id="myNav" className={isFixed ? 'fixed-nav' : ''}>
+    <nav ref={navRef} id="myNav" className={isFixed ? "fixed-nav" : ""}>
       <div
         className={`navbar ${isOpen ? "open" : ""} container`}
         ref={navbarRef}
@@ -76,29 +76,29 @@ const Header = () => {
 
           <ul className={`nav-links ${isOpen ? "open" : ""}`}>
             <li onClick={() => setIsOpen(false)}>
-              <NavLink to="/">Company</NavLink>
+              <NavLink to="/">{t("Company")}</NavLink>
             </li>
             <li onClick={() => setIsOpen(false)}>
-              <NavLink to="/services">Services</NavLink>
+              <NavLink to="/services">{t("Services")}</NavLink>
             </li>
             <li onClick={() => setIsOpen(false)}>
-              <NavLink to="/industries">Industries</NavLink>
+              <NavLink to="/industries">{t("Industries")}</NavLink>
             </li>
             <li onClick={() => setIsOpen(false)}>
-              <NavLink to="/partners">Partners</NavLink>
+              <NavLink to="/partners">{t("Partners")}</NavLink>
             </li>
             <li onClick={() => setIsOpen(false)}>
-              <NavLink to="/careers">Careers</NavLink>
+              <NavLink to="/careers">{t("Careers")}</NavLink>
             </li>
             {/* <li><NavLink to="/insights">Insights</NavLink></li> */}
             <li onClick={() => setIsOpen(false)}>
-              <NavLink to="/calendar">Calendar</NavLink>
+              <NavLink to="/calendar">{t("Calendar")}</NavLink>
             </li>
             <li onClick={() => setIsOpen(false)}>
-              <NavLink to="/employees">Employees</NavLink>
+              <NavLink to="/employees">{t("Employees")}</NavLink>
             </li>
             <li onClick={() => setIsOpen(false)}>
-              <NavLink to="/contacts">Contacts</NavLink>
+              <NavLink to="/contacts">{t("Contacts")}</NavLink>
             </li>
             <li>
               <TranslateBtn />
