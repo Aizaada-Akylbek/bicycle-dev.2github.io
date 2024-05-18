@@ -10,6 +10,16 @@ const Calendar = () => {
   return (
     <div className="container">
       <div className="hero-calendar dark-blue">
+        <div className="circle l-circle-calendar">
+          <div className="circle-inner" />
+        </div>
+        <div className="circle m-circle-calendar">
+          <div className="circle-inner" />
+        </div>
+        <div className="circle s-circle-calendar">
+          <div className="circle-inner" />
+        </div>
+
         <div className="bg-long bg-calendar" />
         <h2 className="main-title poppins">
           Office ipsum you must <br /> be muted. Who's
@@ -31,6 +41,12 @@ const Calendar = () => {
           <AppCalendar />
         </div>
         <div className="calendar-office">
+          <div className="circle xs-calendar-office1">
+            <div className="circle-inner" />
+          </div>
+          <div className="circle xs-calendar-office2">
+            <div className="circle-inner" />
+          </div>
           <h4 className="poppins">
             Office ipsum you must be muted. Activities just.
           </h4>

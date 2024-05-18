@@ -34,33 +34,43 @@ const Industries = () => {
   return (
     <div className="industries ">
       <div className="container">
-      <div className="bg-medium bg-industries"/>
-      <div className="industries-hero">
-        <h2 className="main-title poppins dark-blue">
-          Service Excellence across Different Industries!
-        </h2>
-        <p className="main-title-info">
-          Benefit from our extensive expertise in tech solutions, catering to a
-          range of needs, from local applications to global digital platforms.
-        </p>
-        <NavLink to="/contacts">
-          {" "}
-          <button className="main-btn">Contact us</button>
-        </NavLink>
-      </div>
-
-      <div className="industries-cards">
-        <div className="bg-medium bg-industries-cards"/>
-        {industriesData.map((el) => (
-          <div className="industries-card">
-            <h3 className="poppins middle-blue">{el.number}</h3>
-            <h4 className="dark-blue">{el.title}</h4>
-            <p>{el.description}</p>
+        <div className="circle s-circle-industries">
+          <div className="circle-inner" />
+        </div>
+        <div className="industries-hero">
+          <div className="bg-medium bg-industries" />
+          <div className="circle l-circle-industries">
+            <div className="circle-inner" />
           </div>
-        ))}
-      </div>
-      <Review />
-      <DevOperations />
+          <div className="circle xs-circle-industries">
+            <div className="circle-inner" />
+          </div>
+          <h2 className="main-title poppins dark-blue">
+            Service Excellence across Different Industries!
+          </h2>
+          <p className="main-title-info">
+            Benefit from our extensive expertise in tech solutions, catering to
+            a range of needs, from local applications to global digital
+            platforms.
+          </p>
+          <NavLink to="/contacts">
+            {" "}
+            <button className="main-btn">Contact us</button>
+          </NavLink>
+        </div>
+
+        <div className="industries-cards">
+          <div className="bg-medium bg-industries-cards" />
+          {industriesData.map((el) => (
+            <div className="industries-card">
+              <h3 className="poppins middle-blue">{el.number}</h3>
+              <h4 className="dark-blue">{el.title}</h4>
+              <p>{el.description}</p>
+            </div>
+          ))}
+        </div>
+        <Review />
+        <DevOperations />
       </div>
     </div>
   );

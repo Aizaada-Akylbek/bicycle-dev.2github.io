@@ -10,8 +10,17 @@ const Services = () => {
   return (
     <div>
       <div className="services">
-        <div className="bg-long bg-long-services"/>
-        <div className="bg-small bg-small-services"/>
+        <div className="bg-long bg-long-services" />
+        <div className="bg-small bg-small-services" />
+        <div className="circle l-circle-services">
+          <div className="circle-inner" />
+        </div>
+        <div className="circle s-circle-services">
+          <div className="circle-inner" />
+        </div>
+        <div className="circle xs-circle-services">
+          <div className="circle-inner" />
+        </div>
         <div className="container">
           <div className="hero-services">
             <h2 className="main-title poppins dark-blue">
@@ -19,7 +28,8 @@ const Services = () => {
               Your Efficiency:
             </h2>
             <div className="main-title-info services-info">
-              Tailored IT Solutions with Outsourcing & <br /> Outstaffing Excellence!
+              Tailored IT Solutions with Outsourcing & <br /> Outstaffing
+              Excellence!
             </div>
             <button className="main-btn">
               <NavLink to="/contacts">Contacts</NavLink>
@@ -33,7 +43,7 @@ const Services = () => {
       <Slider />
       <div className="container">
         <div className="it-outsourcing">
-          <div className="bg-medium bg-outsource"/>
+          <div className="bg-medium bg-outsource" />
           <div className="main-title-second poppins middle-blue">
             IT-outsourcing
           </div>

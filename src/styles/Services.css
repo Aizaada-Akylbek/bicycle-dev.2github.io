@@ -28,6 +28,21 @@
     left: 7%;
 
 }
+.l-circle-services {
+    top: 10%;
+    padding: 13%;
+    right: 5%;
+}
+.s-circle-services {
+    top: 37%;
+    padding: 7%;
+    right: 20%
+}
+.xs-circle-services {
+    bottom: 10%;
+    left: 1%;
+    padding: 5%;
+}
 @media screen and (max-width:765px) {
     .bg-long-services {
         top: 5%;

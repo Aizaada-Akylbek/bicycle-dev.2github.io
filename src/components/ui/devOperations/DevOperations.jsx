@@ -14,6 +14,12 @@ const DevOperations = () => {
         {" "}
         <button className="main-btn">Contact our experts</button>
       </NavLink>
+      <div className="circle circle-development">
+        <div className="circle-inner" />
+      </div>
+      <div className="circle s-circle-development">
+        <div className="circle-inner" />
+      </div>
     </div>
   );
 };

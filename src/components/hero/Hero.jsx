@@ -15,7 +15,7 @@ const Hero = () => {
         <span className="middle-blue">{t(" dynamic growth")}</span>
       </h1>
       <p className="main-title-info">
-        We are pleased to offer a wide range of high quality IT services.
+        {t("We are pleased to offer a wide range of high quality IT services.")}
       </p>
       <div className="hero-btns">
         <CareerBtn />
