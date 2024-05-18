@@ -24,6 +24,9 @@ const AppCalendar = () => {
   const months = Array.from({ length: 12 }, (_, i) => i);
   return (
     <div className="appCalendar">
+      <div className="circle s-circle-calendar2">
+        <div className="circle-inner" />
+      </div>
       <div className="calendar">
         <h1 className="year middle-blue poppins">{year} Calendar </h1>
         <div className="months">
