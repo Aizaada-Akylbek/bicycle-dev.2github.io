@@ -3,6 +3,9 @@ import Team1 from "../../assets/team/Team.svg";
 import Team2 from "../../assets/team/Team1.svg";
 import Team3 from "../../assets/team/Team2.svg";
 import Team4 from "../../assets/team/Team3.svg";
+import Askat from '../../assets/team/Askat.jpg'
+import Farkhat from '../../assets/team/Farkhat.jpg'
+import Zhandos from '../../assets/team/Zhandos.jpg'
 import { NavLink } from "react-router-dom";
 import LD from "../../assets/logoLinks/LinkedIn.svg";
 import "./Team.css";
@@ -10,10 +13,10 @@ import { useTranslation } from "react-i18next";
 
 const Team = () => {
   const teamData = [
-    { img: Team1, name: "", position: "", lnkdn:"https://www.linkedin.com/feed/" },
-    { img: Team2, name: "", position: "", lnkdn:"https://www.linkedin.com/feed/" },
-    { img: Team3, name: "", position: "", lnkdn:"https://www.linkedin.com/feed/" },
-    { img: Team4, name: "", position: "", lnkdn:"https://www.linkedin.com/feed/" },
+    { img: Askat, name: "Askat Baktiyar", position: "Business Development Director", lnkdn:"https://www.linkedin.com/feed/" },
+    { img: Farkhat, name: "Farkhat Baktiyar", position: "Director", lnkdn:"https://www.linkedin.com/in/farkhat-baktiyar-8626791a8/" },
+    { img: Team1, name: "Adilet", position: "Backend developer", lnkdn:"https://www.linkedin.com/feed/" },
+    { img: Zhandos, name: "Zhandos Manapov", position: "Frontend Developer", lnkdn:"https://www.linkedin.com/in/zhandos-manapov-b165a31a9/" },
   ];
   const {t}=useTranslation()
   return (
@@ -32,8 +35,8 @@ const Team = () => {
             <div className="image-container" key={el.img}>
               <img src={el.img} alt="user" className="img-team" />
               <div className="image-text">
-                <h6>BDM and Founder</h6>
-                <h3>Farkhat Bakhtiyar</h3>
+                <h6>{el.position}</h6>
+                <h3>{el.name}</h3>
                 <NavLink to={el.lnkdn}>
                   <img src={LD} alt="" />
                 </NavLink>
