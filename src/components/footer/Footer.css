@@ -109,6 +109,10 @@ footer {
   color: #11295a;
   margin-bottom: 5px;
 }
+.error {
+  color:red;
+  margin-top: 5px;
+}
 @media screen and (max-width: 770px) {
   .footerBlocks {
     flex-direction: column;

@@ -13,68 +13,39 @@ const Employees = () => {
     {
       name: "Adilet ",
       social: linkedin,
-      job: "Software Engineer",
+      job: "Backend",
       descr: "There are many variations of passages of Lorem Ipsum available",
       img: userImage2,
     },
     {
       name: "Zhandos Manapov",
       social: linkedin,
-      job: "Software Engineer",
+      job: "Frontend",
       descr: "There are many variations of passages of Lorem Ipsum available",
       img: Zhandos,
     },
     {
       name: "Aizaada Akylbekova",
       social: linkedin,
-      job: "Software Engineer",
+      job: "Frontend",
       descr: "There are many variations of passages of Lorem Ipsum available",
       img: Aizaada,
     },
-    // {
-    //   name: "Leo Arcand",
-    //   social: linkedin,
-    //   job: "Software Engineer",
-    //   descr: "There are many variations of passages of Lorem Ipsum available",
-    //   img: userImage4,
-    // },
-    // {
-    //   name: "Marilyn Levin",
-    //   social: linkedin,
-    //   job: "Software Engineer",
-    //   descr: "There are many variations of passages of Lorem Ipsum available",
-    //   img: userImage5,
-    // },
-    // {
-    //   name: "Lindsey Dokidis",
-    //   social: linkedin,
-    //   job: "Software Engineer",
-    //   descr: "There are many variations of passages of Lorem Ipsum available",
-    //   img: userImage6,
-    // },
-    // {
-    //   name: "Hanna Dias",
-    //   social: linkedin,
-    //   job: "Software Engineer",
-    //   descr: "There are many variations of passages of Lorem Ipsum available",
-    //   img: userImage7,
-    // },
-    // {
-    //   name: "Ryan Gouse",
-    //   social: linkedin,
-    //   job: "Software Engineer",
-    //   descr: "There are many variations of passages of Lorem Ipsum available",
-    //   img: userImage8,
-    // },
   ]);
+  const [filter, setFilter] = useState("All");
+
   const btns = [
+    "All",
     "Backend",
     "Frontend",
-    "Design",
-    "DevOps",
-    "Marketing",
-    "Human Resources",
   ];
+
+  const filterPosition = (position) => {
+    setFilter(position);
+  };
+
+  const filteredUsers = filter === "All" ? users : users.filter(user => user.job === filter);
+
 
   return (
     <div className="container">
@@ -84,12 +55,13 @@ const Employees = () => {
           <h3 className="main-title middle-blue poppins">Our employees</h3>
           <div className="employees-btns">
             {btns.map((el) => (
-              <button className="dark-blue">{el}</button>
+              <button className="dark-blue"                 onClick={() => filterPosition(el)}
+              >{el}</button>
             ))}
           </div>
 
           <div className="employees-cards dark-blue">
-            {users.map((el, index) => (
+            {filteredUsers.map((el, index) => (
               <div key={index} className="employees-user">
                 <img className="user-img" src={el.img} alt="user" />
                 <div className="employees-info">
@@ -99,7 +71,7 @@ const Employees = () => {
                     alt="social"
                   />
                   <h4>{el.name}</h4>
-                  <h6>{el.job}</h6>
+                  <h6>{el.job} developer</h6>
                   <p>{el.descr}</p>
                   <button className="main-btn">Contact our experts</button>
                 </div>

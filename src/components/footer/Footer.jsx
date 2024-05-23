@@ -17,14 +17,28 @@ const Modal = ({ isOpen }) => {
 };
 const Footer = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const {t}=useTranslation()
+  const [inputValue, setInputValue] = useState('');
+  const [error, setError] = useState('');
+  const { t } = useTranslation();
 
   const handleButtonClick = () => {
+    if (inputValue.trim() === '') {
+      setError(t('Please fill out this field'));
+      return;
+    }
+    setError('');
     setIsModalOpen(true);
     console.log("tttt");
     setTimeout(() => {
       setIsModalOpen(false);
     }, 3000); // Close modal after 3 seconds
+  };
+
+  const handleInputChange = (e) => {
+    setInputValue(e.target.value);
+    if (error) {
+      setError('');
+    }
   };
   return (
     <footer>
@@ -37,16 +51,19 @@ const Footer = () => {
                 {t('working together?')}
               </div>
               <div className="footerContact">
-                <input
+              <input
                   type="text"
                   placeholder={t("Email address")}
-                  className="footerInput"
+                  className={`footerInput ${error ? 'invalid' : ''}`}
+                  value={inputValue}
+                  onChange={handleInputChange}
                 />
                 <button onClick={handleButtonClick} className="footerBtn">
                   <i className="bi bi-arrow-right"></i>
                 </button>
                 <Modal isOpen={isModalOpen} />
               </div>
+                {error && <div className="error">{error}</div>}
               <div className="logoLinks">
                 <img src={FB} alt="" />
                 <img src={TW} alt="" />
