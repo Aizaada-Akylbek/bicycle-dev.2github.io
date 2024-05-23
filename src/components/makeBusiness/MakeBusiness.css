@@ -20,10 +20,13 @@
 }
 
 .macbook {
-  max-width: 23%;
+  max-width: 33%;
+  margin: 0 15px ;
 }
 .notebook {
-  max-width: 15%;
+  max-width: 25%;
+  margin: 0 15px ;
+
 }
 @media screen and (max-width: 660px) {
   .make-your-banner-text {

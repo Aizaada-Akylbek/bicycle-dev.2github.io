@@ -2,21 +2,28 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 64px 0 115px;
+    margin: 0 0 56px;
     position: relative;
+}
+
+
+.partners-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    overflow: hidden;
+    border-radius:20px;
+    margin-top: 64px;
+
 }
 .partners-card img {
     width: 100%;
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
-    object-fit: cover;
     max-height: 37vh;
-    border-radius:20px
+    height: 370px;
+    object-fit: contain;
+    object-position: center ;
 }
 
-.partners-card {
-}
 .partners-card h4 {
     font-weight: 700;
     font-size: 20px;

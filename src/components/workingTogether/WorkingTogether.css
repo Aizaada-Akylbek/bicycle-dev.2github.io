@@ -11,8 +11,9 @@
   width: 42.7%;
 }
 .contact-img {
-  width: 42.7%;
-  height: 42.7%;
+  max-width: 43vw;
+  max-height: 90vh;
+  object-fit: contain;
 }
 
 .contact-address h3 {

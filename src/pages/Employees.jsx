@@ -1,74 +1,71 @@
 import React, { useState } from "react";
 import "../styles/Employees.css";
-import userImage1 from "../assets/employeesImgs/Image Placeholder.png";
+import Aizaada from '../assets/employeesImgs/Снимок экрана 2024-05-23 в 2.44.50 PM.png'
+import Zhandos from '../assets/team/Zhandos.jpg'
+
 import userImage2 from "../assets/employeesImgs/user2.png";
-import userImage3 from "../assets/employeesImgs/Paste image.png";
-import userImage4 from "../assets/employeesImgs/userd4.png";
-import userImage5 from "../assets/employeesImgs/user5.png";
-import userImage6 from "../assets/employeesImgs/user6.png";
-import userImage7 from "../assets/employeesImgs/user7.png";
-import userImage8 from "../assets/employeesImgs/user8.png";
+
 import linkedin from "../assets/employeesImgs/LinkedIn.png";
 import DevOperations from "../components/ui/devOperations/DevOperations";
 
 const Employees = () => {
   const [users, setUsers] = useState([
     {
-      name: "Jocelyn Schleifer",
-      social: linkedin,
-      job: "Software Engineer",
-      descr: "There are many variations of passages of Lorem Ipsum available",
-      img: userImage1,
-    },
-    {
-      name: "Martin Donin",
+      name: "Adilet ",
       social: linkedin,
       job: "Software Engineer",
       descr: "There are many variations of passages of Lorem Ipsum available",
       img: userImage2,
     },
     {
-      name: "Jordyn Septimus",
+      name: "Zhandos Manapov",
       social: linkedin,
       job: "Software Engineer",
       descr: "There are many variations of passages of Lorem Ipsum available",
-      img: userImage3,
+      img: Zhandos,
     },
     {
-      name: "Leo Arcand",
+      name: "Aizaada Akylbekova",
       social: linkedin,
       job: "Software Engineer",
       descr: "There are many variations of passages of Lorem Ipsum available",
-      img: userImage4,
+      img: Aizaada,
     },
-    {
-      name: "Marilyn Levin",
-      social: linkedin,
-      job: "Software Engineer",
-      descr: "There are many variations of passages of Lorem Ipsum available",
-      img: userImage5,
-    },
-    {
-      name: "Lindsey Dokidis",
-      social: linkedin,
-      job: "Software Engineer",
-      descr: "There are many variations of passages of Lorem Ipsum available",
-      img: userImage6,
-    },
-    {
-      name: "Hanna Dias",
-      social: linkedin,
-      job: "Software Engineer",
-      descr: "There are many variations of passages of Lorem Ipsum available",
-      img: userImage7,
-    },
-    {
-      name: "Ryan Gouse",
-      social: linkedin,
-      job: "Software Engineer",
-      descr: "There are many variations of passages of Lorem Ipsum available",
-      img: userImage8,
-    },
+    // {
+    //   name: "Leo Arcand",
+    //   social: linkedin,
+    //   job: "Software Engineer",
+    //   descr: "There are many variations of passages of Lorem Ipsum available",
+    //   img: userImage4,
+    // },
+    // {
+    //   name: "Marilyn Levin",
+    //   social: linkedin,
+    //   job: "Software Engineer",
+    //   descr: "There are many variations of passages of Lorem Ipsum available",
+    //   img: userImage5,
+    // },
+    // {
+    //   name: "Lindsey Dokidis",
+    //   social: linkedin,
+    //   job: "Software Engineer",
+    //   descr: "There are many variations of passages of Lorem Ipsum available",
+    //   img: userImage6,
+    // },
+    // {
+    //   name: "Hanna Dias",
+    //   social: linkedin,
+    //   job: "Software Engineer",
+    //   descr: "There are many variations of passages of Lorem Ipsum available",
+    //   img: userImage7,
+    // },
+    // {
+    //   name: "Ryan Gouse",
+    //   social: linkedin,
+    //   job: "Software Engineer",
+    //   descr: "There are many variations of passages of Lorem Ipsum available",
+    //   img: userImage8,
+    // },
   ]);
   const btns = [
     "Backend",

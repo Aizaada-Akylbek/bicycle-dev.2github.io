@@ -18,7 +18,7 @@ const Slider = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % slideCount);
-    }, 3000); // Adjust the interval duration (in milliseconds) based on your preference
+    }, 4000); // Adjust the interval duration (in milliseconds) based on your preference
 
     return () => clearInterval(interval);
   }, [slideCount]);
