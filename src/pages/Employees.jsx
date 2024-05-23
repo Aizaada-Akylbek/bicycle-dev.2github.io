@@ -109,7 +109,16 @@ const Employees = () => {
               </div>
             ))}
           </div>
+          <div className="circle m-circle-employees">
+            <div className="circle-inner" />
+          </div>
           <DevOperations />
+        </div>
+        <div className="circle s-circle-employees1">
+          <div className="circle-inner" />
+        </div>
+        <div className="circle s-circle-employees2">
+          <div className="circle-inner" />
         </div>
       </div>
     </div>

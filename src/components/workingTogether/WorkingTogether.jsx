@@ -9,24 +9,26 @@ import Twitter from "../../assets/contactUs/Twitter.svg";
 import LinkedIn from "../../assets/contactUs/LinkedIn.svg";
 import Instagram from "../../assets/contactUs/Instagram.svg";
 import YouTube from "../../assets/contactUs/YouTube.svg";
+import { useTranslation } from "react-i18next";
 
 const WorkingTogether = () => {
+  const {t}=useTranslation()
   return (
     <div className="contact-interested container dark-blue">
       <div className="bg-small contact-interested-bg"/>
       <div className="contact-address">
         <h3 className="poppins main-title-second ">
-          Interested in <span className="middle-blue">working together?</span>
+          {t('Interested in')} <span className="middle-blue">{t('working together?')}</span>
         </h3>
 
         <div className="contact-location">
-          <h4>Our offices:</h4>
-          <h5>Leipzig, Germany</h5>
-          <h5>Bishkek, the Kyrgyz Republic</h5>
+          <h4>{t('Our offices')}:</h4>
+          <h5>{t('Leipzig')}, {t('Germany')}</h5>
+          <h5>{t('Bishkek')},  {t('Kyrgyz Republic')}</h5>
         </div>
 
         <div className="contact-location">
-          <h4>Contact us:</h4>
+          <h4>{t('Contact us')}:</h4>
           <h5>team@bicycle-dev.com</h5>
           <div className="contact-us">
             <div className="contact-tel">

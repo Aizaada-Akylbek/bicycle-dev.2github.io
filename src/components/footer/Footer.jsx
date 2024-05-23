@@ -6,15 +6,18 @@ import TW from "../../assets/logoLinks/Twitter.svg";
 import IG from "../../assets/logoLinks/Instagram.svg";
 import LN from "../../assets/logoLinks/LinkedIn.svg";
 import YT from "../../assets/logoLinks/YouTube.svg";
+import { useTranslation } from "react-i18next";
 const Modal = ({ isOpen }) => {
+  const {t}=useTranslation()
   if (!isOpen) {
     return null;
   }
 
-  return <div className="modal-overlay">Your message has been sent</div>;
+  return <div className="modal-overlay">{t('Your message has been sent')}</div>;
 };
 const Footer = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const {t}=useTranslation()
 
   const handleButtonClick = () => {
     setIsModalOpen(true);
@@ -30,13 +33,13 @@ const Footer = () => {
           <div className="footerBlocks">
             <div className="footerLogos">
               <div className="titleWork">
-                Interested in <br />
-                working together?
+                {t('Interested in')} <br />
+                {t('working together?')}
               </div>
               <div className="footerContact">
                 <input
                   type="text"
-                  placeholder="Email address"
+                  placeholder={t("Email address")}
                   className="footerInput"
                 />
                 <button onClick={handleButtonClick} className="footerBtn">
@@ -54,66 +57,66 @@ const Footer = () => {
             </div>
             <div className="footerNav">
               <ul className="footerNavList">
-                <h2>About</h2>
+                <h2>{t('About')}</h2>
                 <li>
-                  <NavLink to="/">Company</NavLink>
+                  <NavLink to="/">{t('Company')}</NavLink>
                 </li>
                 <li>
-                  <NavLink to="/services">Services</NavLink>
+                  <NavLink to="/services">{t('Services')}</NavLink>
                 </li>
                 <li>
-                  <NavLink to="/industries">Industries</NavLink>
+                  <NavLink to="/industries">{t('Industries')}</NavLink>
                 </li>
                 <li>
-                  <NavLink to="/partners">Partners</NavLink>
+                  <NavLink to="/partners">{t('Partners')}</NavLink>
                 </li>
                 <li>
-                  <NavLink to="/careers">Careers</NavLink>
+                  <NavLink to="/careers">{t('Careers')}</NavLink>
                 </li>
                 <li>
-                  <NavLink to="/contacts">Contacts</NavLink>
-                </li>
-              </ul>
-              <ul className="footerNavList">
-                <h2>Career</h2>
-                <li>
-                  <NavLink to="/">Company</NavLink>
-                </li>
-                <li>
-                  <NavLink to="/services">Services</NavLink>
-                </li>
-                <li>
-                  <NavLink to="/industries">Industries</NavLink>
-                </li>
-                <li>
-                  <NavLink to="/partners">Partners</NavLink>
-                </li>
-                <li>
-                  <NavLink to="/careers">Careers</NavLink>
-                </li>
-                <li>
-                  <NavLink to="/contacts">Contacts</NavLink>
+                  <NavLink to="/contacts">{t('Contacts')}</NavLink>
                 </li>
               </ul>
               <ul className="footerNavList">
-                <h2>Career</h2>
+                <h2>{t('Career')}</h2>
                 <li>
-                  <NavLink to="/">Company</NavLink>
+                  <NavLink to="/">{t('Company')}</NavLink>
                 </li>
                 <li>
-                  <NavLink to="/services">Services</NavLink>
+                  <NavLink to="/services">{t('Services')}</NavLink>
                 </li>
                 <li>
-                  <NavLink to="/industries">Industries</NavLink>
+                  <NavLink to="/industries">{t('Industries')}</NavLink>
                 </li>
                 <li>
-                  <NavLink to="/partners">Partners</NavLink>
+                  <NavLink to="/partners">{t('Partners')}</NavLink>
                 </li>
                 <li>
-                  <NavLink to="/careers">Careers</NavLink>
+                  <NavLink to="/careers">{t('Careers')}</NavLink>
                 </li>
                 <li>
-                  <NavLink to="/contacts">Contacts</NavLink>
+                  <NavLink to="/contacts">{t('Contacts')}</NavLink>
+                </li>
+              </ul>
+              <ul className="footerNavList">
+                <h2>{t('Career')}</h2>
+                <li>
+                  <NavLink to="/">{t('Company')}</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/services">{t('Services')}</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/industries">{t('Industries')}</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/partners">{t('Partners')}</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/careers">{t('Careers')}</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/contacts">{t('Contacts')}</NavLink>
                 </li>
               </ul>
             </div>

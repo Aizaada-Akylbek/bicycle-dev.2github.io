@@ -1,5 +1,6 @@
 .employees{
   position: relative;
+  margin-bottom: 40px;
 }
 .employees-block h3 {
   margin: 56px 0 48px;
@@ -77,6 +78,22 @@ background-color:white;
   top: 50%;
   z-index: -1;
 
+}
+.m-circle-employees {
+  padding: 6%;
+  bottom:17%;
+  left: -2%;
+  z-index: -1;
+}
+.s-circle-employees1{
+  padding: 3%;
+  bottom:-5%;
+  right: 0;
+}
+.s-circle-employees2 {
+  padding: 3%;
+  bottom: -8%;
+  right: 3%;
 }
 @media screen and (max-width: 1056px) {
   .employees-cards {
