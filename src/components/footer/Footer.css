@@ -41,14 +41,19 @@ footer {
   justify-content: space-between;
   padding-bottom: 0.5%;
 }
+
 .footerInput {
   border-color: transparent;
   padding: 1% 0 5%;
   background-color: transparent;
+  color:#EEF8FF;
+  outline: none;
 }
 .footerInput::placeholder {
   font-size: 14px;
   font-weight: 200 !important;
+  color:#EEF8FF;
+
 }
 .footerBtn {
   padding: 4.5px 27px;
