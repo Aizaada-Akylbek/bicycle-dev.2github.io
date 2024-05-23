@@ -58,6 +58,15 @@
   padding: 5%;
   top: 30%;
 }
+.m-circle-faq {
+  padding: 5%;
+  top: 25%;
+  left: -3%;
+  /* background-color:red */
+}
+.m-circle-faq .circle-inner {
+  
+}
 
 @media screen and (max-width: 660px) {
   .faq-title h5 {

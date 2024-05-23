@@ -5,8 +5,10 @@ import Expertise from "../components/expertise/Expertise";
 import Slider from "../components/slider/Slider";
 import ItOutstaffing from "../components/itOutstaff/ItOutstaffing";
 import DevOperations from "../components/ui/devOperations/DevOperations";
+import { useTranslation } from "react-i18next";
 
 const Services = () => {
+  const {t}=useTranslation()
   return (
     <div>
       <div className="services">
@@ -24,15 +26,15 @@ const Services = () => {
         <div className="container">
           <div className="hero-services">
             <h2 className="main-title poppins dark-blue">
-              Elevate <br />
-              Your Efficiency:
+              {t('Elevate')}
+               <br />
+             {t('Your Efficiency')}:
             </h2>
             <div className="main-title-info services-info">
-              Tailored IT Solutions with Outsourcing & <br /> Outstaffing
-              Excellence!
+              {t('Tailored IT Solutions with Outsourcing')} & <br /> {t('Outstaffing Excellence')}!
             </div>
             <button className="main-btn">
-              <NavLink to="/contacts">Contacts</NavLink>
+              <NavLink to="/contacts">{t('Contacts')}</NavLink>
             </button>
           </div>
         </div>
