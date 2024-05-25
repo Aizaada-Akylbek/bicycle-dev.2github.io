@@ -1,10 +1,12 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const Month = ({ year, month, holidays }) => {
+  const {t}=useTranslation()
   const startDate = new Date(year, month, 1);
   const endDate = new Date(year, month + 1, 0);
   const daysInMonth = endDate.getDate();
-  const monthName = startDate.toLocaleString("en-US", { month: "long" });
+  const monthName = t(startDate.toLocaleString("en-US", { month: "long" }));
 
   const startDayOfWeek = startDate.getDay();
 
@@ -15,7 +17,7 @@ const Month = ({ year, month, holidays }) => {
   const totalDays = daysFromPrevMonth + daysInMonth;
   const daysFromNextMonth = totalDays % 7 === 0 ? 0 : 7 - (totalDays % 7);
 
-  const dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  const dayNames = [t("Sun"), t("Mon"), t("Tue"), t("Wed"), t("Thu"), t("Fri"), t("Sat")];
 
   return (
     <div className="month">
