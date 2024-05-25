@@ -4,17 +4,18 @@ import CareersCards from "../components/careersCards/CareersCards";
 import { NavLink } from "react-router-dom";
 import PositionCareers from "../components/positionCareers/PositionCareers";
 import DevOperations from "../components/ui/devOperations/DevOperations";
+import { useTranslation } from "react-i18next";
 
 const Careers = () => {
+  const {t}=useTranslation()
   return (
     <div className="container">
       <div className="hero-careers">
         <h2 className="main-title poppins">
-          Career at <br /> Bycycle Dev
+          {t("Career at")} <br /> Bicycle Dev
         </h2>
         <p className="main-title-info">
-          Step into our multicultural environment filled with creative and
-          driven individuals. 
+          {t("Step into our multicultural environment filled with creative and driven individuals.")} 
         </p>
         <NavLink to="/positions">
           {" "}
