@@ -1,44 +1,46 @@
 import React from "react";
 import "./InfoPositions.css";
+import { useTranslation } from "react-i18next";
 const InfoPositions = () => {
+  const {t}=useTranslation()
   const infoPositionsData = [
     {
-      title: "Our expectations",
+      title: t("Our expectations"),
       list: [
-        "Experience with AWS or GCP",
-        "Understanding of cloud concepts and how to develop secure, high availability solutions in the cloud",
-        "Good at working with infrastructure cost optimization",
-        "Extensive experience with Infrastructure-as-Code approach ",
-        "Experience with managed k8s clusters",
-        "Understanding of service-mesh",
-        "Working with monitoring, alerting and incident management systems",
-        "Experience with configuration management systems: Ansible, Chef, Puppet",
-        "Deploying test environments/infrastructures for backend, frontend, mobile",
-        "Virtualization and containerization - standardization of infrastructure, routines and environments",
-        "Database management: Percona, MariaDB, Postgres, MSSQL, MongoDB, DynamoDB, Redis, etc.",
-        "Basic web applications security, vulnerability and security testing experience",
-        "Building infrastructure in accordance with: HIPAA, GDPR, PCI DSS, ISO 27001, CIS",
-        "English level B1",
+        t("Experience with AWS or GCP"),
+        t("Understanding of cloud concepts and how to develop secure, high availability solutions in the cloud"),
+        t("Good at working with infrastructure cost optimization"),
+        t("Extensive experience with Infrastructure-as-Code approach "),
+        t("Experience with managed k8s clusters"),
+        t("Understanding of service-mesh"),
+        t("Working with monitoring, alerting and incident management systems"),
+        t("Experience with configuration management systems: Ansible, Chef, Puppet"),
+        t("Deploying test environments/infrastructures for backend, frontend, mobile"),
+        t("Virtualization and containerization - standardization of infrastructure, routines and environments"),
+        t("Database management: Percona, MariaDB, Postgres, MSSQL, MongoDB, DynamoDB, Redis, etc."),
+        t("Basic web applications security, vulnerability and security testing experience"),
+        t("Building infrastructure in accordance with: HIPAA, GDPR, PCI DSS, ISO 27001, CIS"),
+        t("English level B1"),
       ],
       id: "1",
     },
     {
-      title: "It will be a plus",
+      title: t("It will be a plus"),
       list: [
-        "AWS certification (system administrator / developer / architect)",
-        "Conversational English",
+        t("AWS certification (system administrator / developer / architect)"),
+        t("Conversational English"),
       ],
       id: "2",
     },
     {
-      title: "Conditions",
+      title: t("Conditions"),
       list: [
-        "Awesome colleagues and managers",
-        "Competitive salary, dollar-pegged rate (or payment in dollars), flexible form of remuneration",
-        "Fulltime",
-        "Official employment, legal assistance in registration of cooperation",
-        "Expert development team. The management of the company has an engineering background. We regularly hold engineering meetings, where we discuss the difficulties we face in the process of work and technological innovations",
-        "Opportunity to study at the expense of the company: courses, electronic library, participation and presentation at conferences. We ourselves regularly make presentations at such conferences as FOSDEM, TeamLeadConf, Golang Conf, GDG DevFests and others, so we will help with the preparation of the report",
+        t("Awesome colleagues and managers"),
+        t("Competitive salary, dollar-pegged rate (or payment in dollars), flexible form of remuneration"),
+        t("Fulltime"),
+        t("Official employment, legal assistance in registration of cooperation"),
+        t("Expert development team. The management of the company has an engineering background. We regularly hold engineering meetings, where we discuss the difficulties we face in the process of work and technological innovations"),
+        t("Opportunity to study at the expense of the company: courses, electronic library, participation and presentation at conferences. We ourselves regularly make presentations at such conferences as FOSDEM, TeamLeadConf, Golang Conf, GDG DevFests and others, so we will help with the preparation of the report"),
       ],
       id: "3",
     },
@@ -48,10 +50,9 @@ const InfoPositions = () => {
       <div className="bg-medium bg-info-positions"/>
       <div className="bg-medium bg-info-positions2"/>
       <div className="info-positions-card">
-        <h2 className="poppins">Who and where are we looking for</h2>
+        <h2 className="poppins">{t("Who and where are we looking for")}</h2>
         <p>
-          We are expanding our DevOps engineering department and look forward to
-          working with professionals in this field.
+      {t("We are expanding our DevOps engineering department and look forward to working with professionals in this field.")}
         </p>
       </div>
       {infoPositionsData.map((el) => (

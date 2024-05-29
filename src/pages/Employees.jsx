@@ -3,14 +3,15 @@ import "../styles/Employees.css";
 import Aizaada from "../assets/employeesImgs/Снимок экрана 2024-05-23 в 2.44.50 PM.png";
 import Zhandos from "../assets/team/Zhandos.jpg";
 import Adilet from "../assets/team/Adilet.jpg";
-
 import userImage2 from "../assets/employeesImgs/user2.png";
 
 import linkedin from "../assets/employeesImgs/LinkedIn.png";
 import DevOperations from "../components/ui/devOperations/DevOperations";
+import { useTranslation } from "react-i18next";
 
 const Employees = () => {
-  const [users, setUsers] = useState([
+  const { t } = useTranslation();
+  const users = [
     {
       name: "Adilet ",
       social: linkedin,
@@ -32,24 +33,27 @@ const Employees = () => {
       descr: "There are many variations of passages of Lorem Ipsum available",
       img: Aizaada,
     },
-  ]);
+  ];
   const [filter, setFilter] = useState("All");
 
-  const btns = ["All", "Backend", "Frontend"];
+  const btns = [t("All"), "Backend", "Frontend"];
 
   const filterPosition = (position) => {
     setFilter(position);
   };
 
   const filteredUsers =
-    filter === "All" ? users : users.filter((user) => user.job === filter);
+
+    filter === "All" || filter==="Все" ? users : users.filter((user) => user.job === filter);
 
   return (
     <div className="container">
       <div className="employees">
         <div className="bg-small bg-employees" />
         <div className="employees-block">
-          <h3 className="main-title middle-blue poppins">Our employees</h3>
+          <h3 className="main-title middle-blue poppins">
+            {t("Our employees")}
+          </h3>
           <div className="employees-btns">
             {btns.map((el) => (
               <button className="dark-blue" onClick={() => filterPosition(el)}>
@@ -69,9 +73,9 @@ const Employees = () => {
                     alt="social"
                   />
                   <h4>{el.name}</h4>
-                  <h6>{el.job} developer</h6>
+                  <h6>{el.job} {t("developer")}</h6>
                   <p>{el.descr}</p>
-                  <button className="main-btn">Contact our experts</button>
+                  <button className="main-btn">{t("Contact our experts")}</button>
                 </div>
               </div>
             ))}

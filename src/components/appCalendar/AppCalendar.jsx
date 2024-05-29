@@ -1,8 +1,10 @@
 import React from "react";
 import "./AppCalendar.css";
 import Month from "../month/Month";
+import { useTranslation } from "react-i18next";
 
 const AppCalendar = () => {
+  const {t}=useTranslation()
   const year = new Date().getFullYear();
   const holidays = [
     "2024-01-01",
@@ -28,7 +30,7 @@ const AppCalendar = () => {
         <div className="circle-inner" />
       </div>
       <div className="calendar">
-        <h1 className="year middle-blue poppins">{year} Calendar </h1>
+        <h1 className="year middle-blue poppins">{year} {t("Calendar")} </h1>
         <div className="months">
           {months.map((month) => (
             <Month key={month} year={year} month={month} holidays={holidays} />

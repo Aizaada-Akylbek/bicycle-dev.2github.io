@@ -1,16 +1,19 @@
 import React, { useState, useRef, forwardRef } from "react";
 import emailjs from "@emailjs/browser";
 import "./PositionForm.css";
+import { useTranslation } from "react-i18next";
 
 const Modal = ({ isOpen }) => {
+  const {t}=useTranslation()
   if (!isOpen) {
     return null;
   }
 
-  return <div className="modal-overlay">Your message has been sent</div>;
+  return <div className="modal-overlay">{t("Your message has been sent")}</div>;
 };
 
 const PositionForm = (props, ref) => {
+  const {t}=useTranslation()
   const [lnkd, setLnkdn] = useState(true);
   const [formValues, setFormValues] = useState({
     user_name: "",
@@ -29,13 +32,13 @@ const PositionForm = (props, ref) => {
 
   const validate = () => {
     let errors = {};
-    if (!formValues.user_name) errors.user_name = "Name is required";
+    if (!formValues.user_name) errors.user_name = t("Name is required");
     if (!formValues.user_email) {
-      errors.user_email = "Email is required";
+      errors.user_email = t("Email is required");
     } else if (!validateEmail(formValues.user_email)) {
-      errors.user_email = "Invalid email format";
+      errors.user_email = t("Invalid email format");
     }
-    if (!formValues.user_phone) errors.user_phone = "Phone is required";
+    if (!formValues.user_phone) errors.user_phone = t("Phone is required");
 
     return errors;
   };
@@ -81,13 +84,13 @@ const PositionForm = (props, ref) => {
           <div className="position-input-blocks">
             <div className="position-input-block">
               <label htmlFor="name" className="redLabels">
-                Your name
+                {t("Your name")}
               </label>
               <input
                 type="text"
                 id="name"
                 className={`full-inputs ${formErrors.user_name ? "input-error" : ""}`}
-                placeholder="Enter your name"
+                placeholder={t("Enter your name")}
                 name="user_name"
                 value={formValues.user_name}
                 onChange={handleInputChange}
@@ -97,13 +100,13 @@ const PositionForm = (props, ref) => {
             </div>
             <div className="position-input-block">
               <label htmlFor="phone" className="redLabels">
-                Phone
+                {t("Phone")}
               </label>
               <input
                 type="tel"
                 id="phone"
                 className={`full-inputs ${formErrors.user_phone ? "input-error" : ""}`}
-                placeholder="Enter phone number"
+                placeholder={t("Enter phone number")}
                 name="user_phone"
                 value={formValues.user_phone}
                 onChange={handleInputChange}
@@ -117,7 +120,7 @@ const PositionForm = (props, ref) => {
           </label>
           <input
             type="text"
-            placeholder="Enter e-mail"
+            placeholder={t("Enter e-mail")}
             id="email"
             className={`full-inputs ${formErrors.user_email ? "input-error" : ""}`}
             name="user_email"
@@ -128,10 +131,10 @@ const PositionForm = (props, ref) => {
           <div className="radio-inputs"></div>
           {lnkd && (
             <div id="linkToLnkdn">
-              <label htmlFor="linkLnkdn">Link to LinkedIn</label>
+              <label htmlFor="linkLnkdn">{t("Link to")} LinkedIn</label>
               <input
                 type="text"
-                placeholder="Paste link"
+                placeholder={t("Paste link")}
                 className={`full-inputs ${formErrors.message ? "input-error" : ""}`}
                 id="linkLnkdn"
                 name="message"
@@ -143,12 +146,10 @@ const PositionForm = (props, ref) => {
           )}
           {!lnkd && <input type="file" />}
           <p>
-            By submitting your application, you consent to the storage of your
-            CV in our database of candidates. If we have another vacancy that
-            suits you, we may contact you *
+           {t("By submitting your application, you consent to the storage of your CV in our database of candidates. If we have another vacancy that suits you, we may contact you")}
           </p>
           <button className="inp-btn" type="submit">
-            I want to work for BicycleDev
+            {t("I want to work for BicycleDev")}
           </button>
           <Modal isOpen={isModalOpen} />
         </form>

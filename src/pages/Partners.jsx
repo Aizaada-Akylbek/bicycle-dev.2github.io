@@ -4,19 +4,20 @@ import PartnersCards from "../components/partnersCards/PartnersCards";
 import PartnersFeedback from "../components/partnersFeedback/PartnersFeedback";
 import Review from "../components/review/Review";
 import DevOperations from "../components/ui/devOperations/DevOperations";
+import { useTranslation } from "react-i18next";
 
 const Partners = () => {
+  const {t}=useTranslation()
   return (
     <div className="container">
       <div className="hero-partners">
         <div>
           <h2 className="main-title poppins">
-            Partners success <br />
-            is our success
+           {t("Partners success")} <br />
+            {t("is our success")}
           </h2>
           <p className="main-title-info">
-            Step into our multicultural environment <br /> filled with creative
-            and driven individuals. 
+            {t("Step into our multicultural environment")} <br /> {t("filled with creative and driven individuals.")} 
           </p>
 
           <button className="main-btn">Label</button>

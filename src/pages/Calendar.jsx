@@ -5,8 +5,10 @@ import CareerBtn from "../components/ui/careerBtn/CareerBtn";
 import AppCalendar from "../components/appCalendar/AppCalendar";
 import "../styles/Calendar.css";
 import DevOperations from "../components/ui/devOperations/DevOperations";
+import { useTranslation } from "react-i18next";
 
 const Calendar = () => {
+  const { t } = useTranslation();
   return (
     <div className="container">
       <div className="hero-calendar dark-blue">
@@ -25,8 +27,9 @@ const Calendar = () => {
           Office ipsum you must <br /> be muted. Who's
         </h2>
         <p className="main-title-info">
-          We help companies reach their potential through a combination of
-          design and digital solutions.
+          {t(
+            "We help companies reach their potential through a combination of design and digital solutions."
+          )}
         </p>
         <NavLink>
           <button className="main-btn calendar-btn">Label</button>
@@ -48,14 +51,10 @@ const Calendar = () => {
             <div className="circle-inner" />
           </div>
           <h4 className="poppins">
-            Office ipsum you must be muted. Activities just.
+            {t("Office ipsum you must be muted. Activities just.")}{" "}
           </h4>
           <p>
-            Office ipsum you must be muted. Users an meat ocean regroup nobody.
-            Staircase ui shoulder squad hear reality club previous would. Savvy
-            production wheel would 4-blocker inclusion were can't tiger. Product
-            stand knowledge keywords commitment is cross-pollination is we. Out
-            fruit better underlying activities floor. Well.
+            {t("Office ipsum you must be muted. Users an meat ocean regroup nobody. Staircase ui shoulder squad hear reality club previous would. Savvy production wheel would 4-blocker inclusion were can't tiger. Product stand knowledge keywords commitment is cross-pollination is we. Out fruit better underlying activities floor. Well.")}.
           </p>
 
           <p>
