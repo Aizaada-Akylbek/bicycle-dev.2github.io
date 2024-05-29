@@ -69,7 +69,7 @@ const Industries = () => {
             </div>
           ))}
         </div>
-        <Review />
+        {/* <Review /> */}
         <DevOperations />
       </div>
     </div>

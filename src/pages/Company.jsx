@@ -15,7 +15,7 @@ const Company = () => {
       <Slider />
       <Mission />
       <Team />
-      <PartnersFeedback />
+      {/* <PartnersFeedback /> */}
       <MakeBusiness />
       <Faq />
       <WorkingTogether />

@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import "../styles/Employees.css";
-import Aizaada from '../assets/employeesImgs/Снимок экрана 2024-05-23 в 2.44.50 PM.png'
-import Zhandos from '../assets/team/Zhandos.jpg'
+import Aizaada from "../assets/employeesImgs/Снимок экрана 2024-05-23 в 2.44.50 PM.png";
+import Zhandos from "../assets/team/Zhandos.jpg";
+import Adilet from "../assets/team/Adilet.jpg";
 
 import userImage2 from "../assets/employeesImgs/user2.png";
 
@@ -15,7 +16,7 @@ const Employees = () => {
       social: linkedin,
       job: "Backend",
       descr: "There are many variations of passages of Lorem Ipsum available",
-      img: userImage2,
+      img: Adilet,
     },
     {
       name: "Zhandos Manapov",
@@ -34,29 +35,26 @@ const Employees = () => {
   ]);
   const [filter, setFilter] = useState("All");
 
-  const btns = [
-    "All",
-    "Backend",
-    "Frontend",
-  ];
+  const btns = ["All", "Backend", "Frontend"];
 
   const filterPosition = (position) => {
     setFilter(position);
   };
 
-  const filteredUsers = filter === "All" ? users : users.filter(user => user.job === filter);
-
+  const filteredUsers =
+    filter === "All" ? users : users.filter((user) => user.job === filter);
 
   return (
     <div className="container">
       <div className="employees">
-        <div className="bg-small bg-employees"/>
+        <div className="bg-small bg-employees" />
         <div className="employees-block">
           <h3 className="main-title middle-blue poppins">Our employees</h3>
           <div className="employees-btns">
             {btns.map((el) => (
-              <button className="dark-blue"                 onClick={() => filterPosition(el)}
-              >{el}</button>
+              <button className="dark-blue" onClick={() => filterPosition(el)}>
+                {el}
+              </button>
             ))}
           </div>
 
