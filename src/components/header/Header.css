@@ -94,6 +94,9 @@ nav {
     margin: 0;
     padding: 0;
   }
+  .navbar {
+    padding: 8px 0;
+  }
   .navbar.open {
     background-color: #11295a;
     height: 612px;
@@ -231,6 +234,5 @@ nav {
     gap: 0px;
     right: 43px;
     top: 0;
-    background-color: green;
   }
 }

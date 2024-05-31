@@ -1,8 +1,4 @@
 import React from "react";
-import Team1 from "../../assets/team/Team.svg";
-import Team2 from "../../assets/team/Team1.svg";
-import Team3 from "../../assets/team/Team2.svg";
-import Team4 from "../../assets/team/Team3.svg";
 import Askat from "../../assets/team/Askat.jpg";
 import Farkhat from "../../assets/team/Farkhat.jpg";
 import Zhandos from "../../assets/team/Zhandos.jpg";
@@ -28,7 +24,7 @@ const Team = () => {
     },
     {
       img: Adilet,
-      name: "Adilet",
+      name: "Adilet Ryskulov",
       position: "Backend developer",
       lnkdn: "https://www.linkedin.com/feed/",
     },

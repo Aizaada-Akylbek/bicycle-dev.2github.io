@@ -44,6 +44,9 @@
     padding: 5%;
 }
 @media screen and (max-width:765px) {
+    .services {
+        padding-bottom: 110px;
+    }
     .bg-long-services {
         top: 5%;
         left: 5%;
