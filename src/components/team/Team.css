@@ -84,6 +84,7 @@
   margin: 1.5rem 0;
 }
 @media screen and (max-width: 680px) {
+
   .cards-team {
     flex-direction: column;
     align-items: center;
@@ -101,4 +102,8 @@
     font-size: 18px;
     width: 100%;
   }
+  .image-container  {
+    width: 100%;
+  }
+
 }

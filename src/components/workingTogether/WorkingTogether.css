@@ -1,9 +1,13 @@
 /* contact-interested */
+
+.working-together{
+  margin: 56px 0;
+}
 .contact-interested {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 4%;
+  /* margin-bottom: 4% 0; */
   position: relative;
 }
 
@@ -11,10 +15,17 @@
   width: 42.7%;
 }
 .contact-img {
-  max-width: 43vw;
-  max-height: 90vh;
-  object-fit: contain;
+  /* max-width: 616px; */
+  max-width: 37vw;
+  /* height: 711px; */
+  height: 100vh;
 }
+/* .contactImg {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+
+} */
 
 .contact-address h3 {
   line-height: 6.75rem;
@@ -68,6 +79,8 @@
   width: 100%;
   height: 100%;
   border-radius: 20px;
+  object-fit: cover;
+  object-position: center;
 }
 .contact-tel {
   display: flex;
@@ -88,7 +101,8 @@
   left: 50%;
   z-index: -1;
 }
-@media screen and (max-width: 660px) {
+
+@media screen and (max-width: 1000px) {
   .contact-interested {
     display: block;
     padding-top: 25px;
@@ -100,7 +114,9 @@
     width: 100%;
   }
   .contact-img {
-    width: 100%;
+    margin-top: 20%;
+    max-width: 100vw;
+    max-height: 100vh;
   }
 }
 @media screen and (max-width: 385px) {
