@@ -57,8 +57,11 @@ const Services = () => {
           </button>
         </div>
       </div>
+      <div className="container">
       <ItOutstaffing />
+
       <DevOperations />
+      </div>
     </div>
   );
 };

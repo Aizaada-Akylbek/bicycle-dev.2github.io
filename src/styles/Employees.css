@@ -109,3 +109,13 @@ background-color:white;
     flex-wrap: wrap;
   }
 }
+@media screen and (max-width:450px) {
+  .employees-block h3 {
+    margin: 24px 0 40px;
+  }
+  .employees-btns {
+    justify-content: center;
+
+  }
+  
+}

@@ -7,7 +7,7 @@ import { useTranslation } from "react-i18next";
 const DevOperations = () => {
   const {t}=useTranslation()
   return (
-    <div className="development container">
+    <div className="development">
       <h4 className="poppins">
         {t("Do your development")}
         <br /> {t("operations need a level-up?")}

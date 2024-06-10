@@ -1,9 +1,9 @@
 /* service-devolopment */
 .development {
   /* height: 28.19%; */
-  width: 84.4%;
+  /* width: 100%; */
   padding: 64px;
-  gap: 2rem;
+  /* gap: 2rem; */
   border-radius: 2rem;
   opacity: 0px;
   margin: 64px auto;
@@ -34,14 +34,14 @@
 }
 @media screen and (max-width: 802px) {
   .development {
-    width: 90%;
+    /* width: 90%; */
     padding: 48px 16px;
   }
 }
 
 @media screen and (max-width: 615px) {
   .development {
-    width: 90%;
+    /* width: 90%; */
     padding: 48px 16px;
   }
   .development h4 {
