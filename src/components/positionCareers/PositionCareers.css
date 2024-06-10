@@ -12,6 +12,7 @@
     border-radius:65px;
     font-weight: 400;
     font-size: 32px;
+    text-align: center;
 }
 .position-btns {
 margin: 64px 0 40px;
@@ -35,7 +36,6 @@ margin: 64px 0 40px;
 @media screen and (max-width:632px) {
     .position-careers {
         padding: 32px 16px;
-        text-align: center;
     }
     .position-title {
         width: 100%;
@@ -44,8 +44,10 @@ margin: 64px 0 40px;
     .position-btns {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-evenly;
-        margin: 32px 40px;
+        justify-content: start;
+        gap: 2%;
+        /* margin: 32px 40px; */
+        /* padding: 0; */
     }
     .position-btns button {
         margin-right: 0;

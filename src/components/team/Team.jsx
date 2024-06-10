@@ -1,11 +1,8 @@
 import React from "react";
-import Team1 from "../../assets/team/Team.svg";
-import Team2 from "../../assets/team/Team1.svg";
-import Team3 from "../../assets/team/Team2.svg";
-import Team4 from "../../assets/team/Team3.svg";
-import Askat from '../../assets/team/Askat.jpg'
-import Farkhat from '../../assets/team/Farkhat.jpg'
-import Zhandos from '../../assets/team/Zhandos.jpg'
+import Askat from "../../assets/team/Askat.jpg";
+import Farkhat from "../../assets/team/Farkhat.jpg";
+import Zhandos from "../../assets/team/Zhandos.jpg";
+import Adilet from "../../assets/team/Adilet.jpg";
 import { NavLink } from "react-router-dom";
 import LD from "../../assets/logoLinks/LinkedIn.svg";
 import "./Team.css";
@@ -13,20 +10,43 @@ import { useTranslation } from "react-i18next";
 
 const Team = () => {
   const teamData = [
-    { img: Askat, name: "Askat Baktiyar", position: "Business Development Director", lnkdn:"https://www.linkedin.com/feed/" },
-    { img: Farkhat, name: "Farkhat Baktiyar", position: "Director", lnkdn:"https://www.linkedin.com/in/farkhat-baktiyar-8626791a8/" },
-    { img: Team1, name: "Adilet", position: "Backend developer", lnkdn:"https://www.linkedin.com/feed/" },
-    { img: Zhandos, name: "Zhandos Manapov", position: "Frontend Developer", lnkdn:"https://www.linkedin.com/in/zhandos-manapov-b165a31a9/" },
+    {
+      img: Askat,
+      name: "Askat Baktiyar",
+      position: "Business Development Director",
+      lnkdn: "https://www.linkedin.com/feed/",
+    },
+    {
+      img: Farkhat,
+      name: "Farkhat Baktiyar",
+      position: "Director",
+      lnkdn: "https://www.linkedin.com/in/farkhat-baktiyar-8626791a8/",
+    },
+    {
+      img: Adilet,
+      name: "Adilet Ryskulov",
+      position: "Backend developer",
+      lnkdn: "https://www.linkedin.com/feed/",
+    },
+    {
+      img: Zhandos,
+      name: "Zhandos Manapov",
+      position: "Frontend Developer",
+      lnkdn: "https://www.linkedin.com/in/zhandos-manapov-b165a31a9/",
+    },
   ];
-  const {t}=useTranslation()
+  const { t } = useTranslation();
   return (
     <div className="team container">
       <div className="team-block">
         <div className="main-title-second poppins dark-blue team-title">
-          <span className="middle-blue">{t("Teamwork")}</span> {t("is the only way we work")}
+          <span className="middle-blue">{t("Teamwork")}</span>{" "}
+          {t("is the only way we work")}
         </div>
         <p>
-     {t("At the heart of our company lies an exceptional team of talented individuals, each bringing unique expertise and passion to the table. From experienced developers crafting elegant code to visionary designers shaping user experiences, we are a cohesive unit dedicated to innovation and excellence.")}
+          {t(
+            "At the heart of our company lies an exceptional team of talented individuals, each bringing unique expertise and passion to the table. From experienced developers crafting elegant code to visionary designers shaping user experiences, we are a cohesive unit dedicated to innovation and excellence."
+          )}
         </p>
       </div>
       <div className="cards-team">
