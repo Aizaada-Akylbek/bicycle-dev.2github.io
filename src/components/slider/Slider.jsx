@@ -29,7 +29,7 @@ const Slider = () => {
 
   return (
     <div className="slider">
-      <Marquee velocity={40}>
+      <Marquee velocity={20}>
         {slides.map((img, index) => (
           <div key={index} className="slide">
             <img src={img} alt="company" />
