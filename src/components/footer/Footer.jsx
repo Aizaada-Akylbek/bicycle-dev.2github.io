@@ -7,8 +7,8 @@ import IG from "../../assets/logoLinks/Instagram.svg";
 import LN from "../../assets/logoLinks/LinkedIn.svg";
 import YT from "../../assets/logoLinks/YouTube.svg";
 import { useTranslation } from "react-i18next";
-
 import FooterContact from "../footerContact/FooterContact";
+
 const Footer = () => {
   const { t } = useTranslation();
   return (
