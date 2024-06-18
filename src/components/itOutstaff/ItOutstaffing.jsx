@@ -7,7 +7,7 @@ import { useTranslation } from "react-i18next";
 const ItOutstaffing = () => {
   const { t } = useTranslation();
   return (
-    <div className="it-outstaffing container">
+    <div className="it-outstaffing">
       <div className="itoutstaffing-blocks-one">
         <div className="main-title-second poppins middle-blue">
           {t("IT-outstaffing")}
