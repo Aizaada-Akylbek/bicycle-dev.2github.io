@@ -84,7 +84,7 @@ const Footer = () => {
 
               <FooterContact />
 
-              <div className="footerContact">
+              {/* <div className="footerContact">
                 <input
                   type="text"
                   placeholder={t("Email address")}
@@ -94,10 +94,10 @@ const Footer = () => {
                 />
                 <button onClick={handleButtonClick} className="footerBtn">
                   <i className="bi bi-arrow-right"></i>
-                </button>
-                <Modal isOpen={isModalOpen} />
-              </div>
-              {error && <div className="error">{error}</div>}
+                </button> */}
+              {/* <Modal isOpen={isModalOpen} /> */}
+              {/* </div>
+              {error && <div className="error">{error}</div>} */}
               <div className="logoLinks">
                 <img src={FB} alt="" />
                 <img src={TW} alt="" />
