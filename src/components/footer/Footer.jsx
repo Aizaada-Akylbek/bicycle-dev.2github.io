@@ -10,10 +10,9 @@ import { useTranslation } from "react-i18next";
 import FooterContact from "../footerContact/FooterContact";
 
 const Footer = () => {
-  const { t } = useTranslation();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [inputValue, setInputValue] = useState("");
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
   // const [formValues, setFormValues] = useState({
   //   user_name: "",
   //   user_phone: "",
@@ -23,11 +22,11 @@ const Footer = () => {
   const { t } = useTranslation();
 
   const handleButtonClick = () => {
-    if (inputValue.trim() === '') {
-      setError(t('Please fill out this field'));
+    if (inputValue.trim() === "") {
+      setError(t("Please fill out this field"));
       return;
     }
-    setError('');
+    setError("");
     setIsModalOpen(true);
     setTimeout(() => {
       setIsModalOpen(false);
@@ -37,7 +36,7 @@ const Footer = () => {
   const handleInputChange = (e) => {
     setInputValue(e.target.value);
     if (error) {
-      setError('');
+      setError("");
     }
   };
   const sendEmail = (e) => {
@@ -65,7 +64,12 @@ const Footer = () => {
         }
       );
     form.current.reset();
-    setFormValues({ user_name: "", user_phone: "", user_email: "", message: "" });
+    setFormValues({
+      user_name: "",
+      user_phone: "",
+      user_email: "",
+      message: "",
+    });
   };
   return (
     <footer>
@@ -81,10 +85,10 @@ const Footer = () => {
               <FooterContact />
 
               <div className="footerContact">
-        <input
+                <input
                   type="text"
                   placeholder={t("Email address")}
-                  className={`footerInput ${error ? 'invalid' : ''}`}
+                  className={`footerInput ${error ? "invalid" : ""}`}
                   value={inputValue}
                   onChange={handleInputChange}
                 />
@@ -93,7 +97,7 @@ const Footer = () => {
                 </button>
                 <Modal isOpen={isModalOpen} />
               </div>
-                {error && <div className="error">{error}</div>}
+              {error && <div className="error">{error}</div>}
               <div className="logoLinks">
                 <img src={FB} alt="" />
                 <img src={TW} alt="" />
@@ -178,7 +182,6 @@ const Footer = () => {
 };
 
 export default Footer;
-
 
 // Footer.js
 // import React, { useState, useRef } from "react";
