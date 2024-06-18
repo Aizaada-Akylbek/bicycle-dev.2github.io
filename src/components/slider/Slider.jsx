@@ -6,13 +6,17 @@ import lg from "../../assets/companyLogos/lg.svg";
 import microsoft from "../../assets/companyLogos/microsoft.svg";
 import slack from "../../assets/companyLogos/slack.svg";
 import sony from "../../assets/companyLogos/sony.png";
+import kamasys from "../../assets/partners/kamasys_logo.jpg";
+import htpkr from "../../assets/partners/Copy_of_htpkr_logo.png";
+import mkLogic from "../../assets/partners/mk_logic_rgb_338_white.png";
+import osma from "../../assets/partners/osma.svg";
 //css
 import "./Slider.css";
 import Marquee from "react-marquee-slider";
 
 const Slider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const slides = [samsung, google, microsoft, lg, slack, sony];
+  const slides = [kamasys, htpkr, mkLogic, osma, kamasys, htpkr, mkLogic, osma];
   const slideCount = slides.length;
 
   useEffect(() => {
@@ -25,7 +29,7 @@ const Slider = () => {
 
   return (
     <div className="slider">
-      <Marquee velocity={50}>
+      <Marquee velocity={40}>
         {slides.map((img, index) => (
           <div key={index} className="slide">
             <img src={img} alt="company" />

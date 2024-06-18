@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { NavLink } from "react-router-dom";
 import "./Footer.css";
 import FB from "../../assets/logoLinks/Facebook.svg";
@@ -7,18 +7,12 @@ import IG from "../../assets/logoLinks/Instagram.svg";
 import LN from "../../assets/logoLinks/LinkedIn.svg";
 import YT from "../../assets/logoLinks/YouTube.svg";
 import { useTranslation } from "react-i18next";
-const Modal = ({ isOpen }) => {
-  const {t}=useTranslation()
-  if (!isOpen) {
-    return null;
-  }
+import FooterContact from "../footerContact/FooterContact";
 
-  return <div className="modal-overlay">{t('Your message has been sent')}</div>;
-};
 const Footer = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [inputValue, setInputValue] = useState("");
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
   // const [formValues, setFormValues] = useState({
   //   user_name: "",
   //   user_phone: "",
@@ -28,11 +22,11 @@ const Footer = () => {
   const { t } = useTranslation();
 
   const handleButtonClick = () => {
-    if (inputValue.trim() === '') {
-      setError(t('Please fill out this field'));
+    if (inputValue.trim() === "") {
+      setError(t("Please fill out this field"));
       return;
     }
-    setError('');
+    setError("");
     setIsModalOpen(true);
     setTimeout(() => {
       setIsModalOpen(false);
@@ -42,7 +36,7 @@ const Footer = () => {
   const handleInputChange = (e) => {
     setInputValue(e.target.value);
     if (error) {
-      setError('');
+      setError("");
     }
   };
   const sendEmail = (e) => {
@@ -70,7 +64,12 @@ const Footer = () => {
         }
       );
     form.current.reset();
-    setFormValues({ user_name: "", user_phone: "", user_email: "", message: "" });
+    setFormValues({
+      user_name: "",
+      user_phone: "",
+      user_email: "",
+      message: "",
+    });
   };
   return (
     <footer>
@@ -79,14 +78,17 @@ const Footer = () => {
           <div className="footerBlocks">
             <div className="footerLogos">
               <div className="titleWork">
-                {t('Interested in')} <br />
-                {t('working together?')}
+                {t("Interested in")} <br />
+                {t("working together?")}
               </div>
+
+              <FooterContact />
+
               <div className="footerContact">
-        <input
+                <input
                   type="text"
                   placeholder={t("Email address")}
-                  className={`footerInput ${error ? 'invalid' : ''}`}
+                  className={`footerInput ${error ? "invalid" : ""}`}
                   value={inputValue}
                   onChange={handleInputChange}
                 />
@@ -95,7 +97,7 @@ const Footer = () => {
                 </button>
                 <Modal isOpen={isModalOpen} />
               </div>
-                {error && <div className="error">{error}</div>}
+              {error && <div className="error">{error}</div>}
               <div className="logoLinks">
                 <img src={FB} alt="" />
                 <img src={TW} alt="" />
@@ -106,66 +108,66 @@ const Footer = () => {
             </div>
             <div className="footerNav">
               <ul className="footerNavList">
-                <h2>{t('About')}</h2>
+                <h2>{t("About")}</h2>
                 <li>
-                  <NavLink to="/">{t('Company')}</NavLink>
+                  <NavLink to="/">{t("Company")}</NavLink>
                 </li>
                 <li>
-                  <NavLink to="/services">{t('Services')}</NavLink>
+                  <NavLink to="/services">{t("Services")}</NavLink>
                 </li>
                 <li>
-                  <NavLink to="/industries">{t('Industries')}</NavLink>
+                  <NavLink to="/industries">{t("Industries")}</NavLink>
                 </li>
                 <li>
-                  <NavLink to="/partners">{t('Partners')}</NavLink>
+                  <NavLink to="/partners">{t("Partners")}</NavLink>
                 </li>
                 <li>
-                  <NavLink to="/careers">{t('Careers')}</NavLink>
+                  <NavLink to="/careers">{t("Careers")}</NavLink>
                 </li>
                 <li>
-                  <NavLink to="/contacts">{t('Contacts')}</NavLink>
-                </li>
-              </ul>
-              <ul className="footerNavList">
-                <h2>{t('Career')}</h2>
-                <li>
-                  <NavLink to="/">{t('Company')}</NavLink>
-                </li>
-                <li>
-                  <NavLink to="/services">{t('Services')}</NavLink>
-                </li>
-                <li>
-                  <NavLink to="/industries">{t('Industries')}</NavLink>
-                </li>
-                <li>
-                  <NavLink to="/partners">{t('Partners')}</NavLink>
-                </li>
-                <li>
-                  <NavLink to="/careers">{t('Careers')}</NavLink>
-                </li>
-                <li>
-                  <NavLink to="/contacts">{t('Contacts')}</NavLink>
+                  <NavLink to="/contacts">{t("Contacts")}</NavLink>
                 </li>
               </ul>
               <ul className="footerNavList">
-                <h2>{t('Career')}</h2>
+                <h2>{t("Career")}</h2>
                 <li>
-                  <NavLink to="/">{t('Company')}</NavLink>
+                  <NavLink to="/">{t("Company")}</NavLink>
                 </li>
                 <li>
-                  <NavLink to="/services">{t('Services')}</NavLink>
+                  <NavLink to="/services">{t("Services")}</NavLink>
                 </li>
                 <li>
-                  <NavLink to="/industries">{t('Industries')}</NavLink>
+                  <NavLink to="/industries">{t("Industries")}</NavLink>
                 </li>
                 <li>
-                  <NavLink to="/partners">{t('Partners')}</NavLink>
+                  <NavLink to="/partners">{t("Partners")}</NavLink>
                 </li>
                 <li>
-                  <NavLink to="/careers">{t('Careers')}</NavLink>
+                  <NavLink to="/careers">{t("Careers")}</NavLink>
                 </li>
                 <li>
-                  <NavLink to="/contacts">{t('Contacts')}</NavLink>
+                  <NavLink to="/contacts">{t("Contacts")}</NavLink>
+                </li>
+              </ul>
+              <ul className="footerNavList">
+                <h2>{t("Career")}</h2>
+                <li>
+                  <NavLink to="/">{t("Company")}</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/services">{t("Services")}</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/industries">{t("Industries")}</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/partners">{t("Partners")}</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/careers">{t("Careers")}</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/contacts">{t("Contacts")}</NavLink>
                 </li>
               </ul>
             </div>
@@ -180,7 +182,6 @@ const Footer = () => {
 };
 
 export default Footer;
-
 
 // Footer.js
 // import React, { useState, useRef } from "react";
