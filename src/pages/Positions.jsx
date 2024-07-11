@@ -4,6 +4,7 @@ import InfoPositions from "../components/infoPositions/InfoPositions";
 import PositionBenefits from "../components/positionBenefits/PositionBenefits";
 import PositionForm from "../components/positionForm/PositionForm";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 const Positions = () => {
   const {t}=useTranslation()
@@ -16,7 +17,7 @@ const Positions = () => {
   };
   return (
     <div className="container">
-      <div className="main-positions">
+      <div className="main-positions" id="main-positions">
         <b>{t("Open positions")}</b>
         <div className="positions-btns">
           <button>{t("Remote")}</button>
@@ -28,8 +29,10 @@ const Positions = () => {
         <p className="main-text-h3">
       {t("We are expanding our DevOps engineering department and look forward to working with professionals in this field.")}
         </p>
-        <button className="main-btn" onClick={handleClick}>
+        <button className="main-btn" onClick={handleClick} >
+          <Link href="#position-form"> 
           {t("Apply now")}
+          </Link>
         </button>
       </div>
       <InfoPositions />

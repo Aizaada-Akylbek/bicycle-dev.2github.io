@@ -1,13 +1,16 @@
 select, option {
-    background-color: initial;
+    /* background-color: initial;
     outline: initial;
-    border: initial;
+    border: initial; */
     color: #11295A;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 500;
     font-family: "Raleway", sans-serif;
+    background-color:transparent;
+    /* padding: 10px; */
  
 }
+
 @media screen and (max-width:1200px) {
     select {
         color: white;

@@ -18,9 +18,9 @@ const TranslateBtn = () => {
 
   return (
     <div className="translateBtn dark-blue">
-      <select value={active} onChange={handleChange} style={{ border: "none" }}>
+      <select className="sel" value={active} onChange={handleChange} style={{ border: "none" }}>
         {options.map((option) => (
-          <option key={option.value} value={option.value}>
+          <option className="opt" key={option.value} value={option.value}>
             {option.label}
           </option>
         ))}
