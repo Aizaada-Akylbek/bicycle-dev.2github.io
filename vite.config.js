@@ -5,10 +5,10 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   base:'/bicycle-dev.github.io/',
   plugins: [react()],
-  // build: {
-  //   outDir: 'dist', // папка для сборки
-  //   rollupOptions: {
-  //     // Дополнительные настройки Rollup, если требуется
-  //   },
-  // }
+  build: {
+    outDir: 'dist', // папка для сборки
+    rollupOptions: {
+      // Дополнительные настройки Rollup, если требуется
+    },
+  }
 })
